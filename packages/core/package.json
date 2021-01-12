@@ -29,9 +29,7 @@
     "prepare": "bob build",
     "clean": "rm -rf lib",
     "example": "yarn --cwd example",
-    "pods": "cd example && pod-install --quiet",
-    
-    "bootstrap": "yarn example && yarn && yarn pods"
+    "pods": "cd example && pod-install --quiet"
   },
   "keywords": [
     "react-native",
@@ -90,6 +88,12 @@
       "@commitlint/config-conventional"
     ]
   },
+  "eslintIgnore": [
+    "node_modules/",
+    "lib/",
+    "babel.config.js",
+    "__tests__"
+  ],
   "release-it": {
     "git": {
       "commitMessage": "chore: release ${version}",
@@ -120,6 +124,5 @@
         }
       ]
     ]
-  },
-  "sideEffects": false
+  }
 }
