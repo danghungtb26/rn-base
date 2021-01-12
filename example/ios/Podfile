@@ -3,10 +3,11 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 
 platform :ios, '10.0'
 
-target 'DvhModuleExample' do
+target 'ExampleExample' do
   config = use_native_modules!
 
   use_react_native!(path: config['reactNativePath'])
+
   pod 'splash', path: '../../packages/splash'
 
   # Enables Flipper.

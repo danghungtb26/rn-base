@@ -5,7 +5,7 @@ import Splash from '@dvh-module/splash'
 
 export default function App() {
   React.useEffect(() => {
-    Splash.hide(0)
+    Splash?.hide(0)
   }, [])
 
   return (
