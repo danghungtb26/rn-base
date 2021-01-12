@@ -2,6 +2,7 @@ import React from 'react'
 
 import { StyleSheet, View, Text } from 'react-native'
 import Splash from '@dvh-module/splash'
+import { formatMoney } from '@dvh-module/core'
 
 export default function App() {
   React.useEffect(() => {
@@ -10,7 +11,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text>Result</Text>
+      <Text>Result {formatMoney(300000)}</Text>
     </View>
   )
 }

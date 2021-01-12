@@ -4,3 +4,6 @@ node_modules/
 scripts/
 metro.config.js
 babel.config.js
+.bootstrap.js
+*/babel.config.js
+__tests__/*
