@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.3](https://github.com/danghungtb26/dvh-module-core/compare/@dvh-module/core@0.1.4...@dvh-module/core@0.1.3) (2021-01-12)
+
+
+### Bug Fixes
+
+* eslint ([1cf8aec](https://github.com/danghungtb26/dvh-module-core/commit/1cf8aecdd3fd937f7f8780c21673a65923dcb8b1))
+
+
+
+
+
 ## [0.1.4](https://github.com/danghungtb26/dvh-module-core/compare/@dvh-module/core@0.1.3...@dvh-module/core@0.1.4) (2021-01-12)
 
 
