@@ -1,3 +1,0 @@
-61 error HttpError: Bad credentials
-61 error     at /Users/mac/Desktop/repo/Module/dvh-module/node_modules/@octokit/request/dist-node/index.js:66:23
-61 error     at processTicksAndRejections (internal/process/task_queues.js:93:5)
