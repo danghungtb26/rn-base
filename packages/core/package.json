@@ -1,6 +1,6 @@
 {
   "name": "@dvh-module/core",
-  "version": "0.1.4",
+  "version": "0.1.2",
   "description": "core",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -27,6 +27,7 @@
     "typescript": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "prepare": "bob build",
+    "release": "release-it",
     "clean": "rm -rf lib",
     "example": "yarn --cwd example",
     "pods": "cd example && pod-install --quiet"
