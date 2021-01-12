@@ -1,0 +1,91 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "@react-native-community",
+    "airbnb",
+    "prettier",
+    "prettier/react"
+  ],
+  "plugins": [
+    "react",
+    "flowtype",
+    "jsx-a11y",
+    "import",
+    "prettier",
+    "@typescript-eslint"
+  ],
+  "rules": {
+    "react/static-property-placement": ["error", "property assignment" , {
+      "contextTypes": "static public field",
+      "childContextTypes": "static public field"
+    }],
+    "camelcase": 0,
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
+      }
+    ],
+    "import/extensions": [
+      1,
+      "never",
+      {
+        "svg": "always"
+      }
+    ],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {"packageDir": "."}
+    ],
+    "prettier/prettier": [
+      "error",
+      {
+        "trailingComma": "es5",
+        "singleQuote": true,
+        "printWidth": 100,
+        "semi": false
+      }
+    ],
+    "semi": [
+      "error",
+      "never"
+    ],
+    "no-use-before-define": [
+      0,
+      {
+        "variables": false,
+        "functions": false,
+        "classes": false
+      }
+    ],
+    "react/require-default-props": [0, { "forbidDefaultForRequired": false }],
+    "global-require": 0,
+    "react/jsx-props-no-spreading": 0,
+    "@typescript-eslint/no-unused-vars": ["error", {
+      "vars": "all",
+      "args": "after-used",
+      "ignoreRestSiblings": true
+    }],
+    "import/no-unresolved": "error"
+    
+  },
+  "env": {
+    "jest": true
+  },
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      // use <root>/tsconfig.json
+      "typescript": {
+        "alwaysTryTypes": true // always try to resolve types under `<root>@types` directory even it doesn't contain any source code, like `@types/unist`
+      }
+    }
+  }
+}

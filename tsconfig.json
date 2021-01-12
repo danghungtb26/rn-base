@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "react-native-dvh-module": ["./src/index"]
+      "@dvh-module/*": ["./packages/*/src"]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,

@@ -1,0 +1,6 @@
+.circleci/
+lib/
+node_modules/
+scripts/
+metro.config.js
+babel.config.js

@@ -1,21 +1,18 @@
-import * as React from 'react';
+import React from 'react'
 
-import { StyleSheet, View, Text } from 'react-native';
-import DvhModule from 'react-native-dvh-module';
-
+import { StyleSheet, View, Text } from 'react-native'
+import Splash from '@dvh-module/splash'
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
-
   React.useEffect(() => {
-    DvhModule.multiply(3, 7).then(setResult);
-  }, []);
+    Splash.hide(0)
+  }, [])
 
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <Text>Result</Text>
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
@@ -29,4 +26,4 @@ const styles = StyleSheet.create({
     height: 60,
     marginVertical: 20,
   },
-});
+})
