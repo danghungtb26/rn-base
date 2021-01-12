@@ -26,5 +26,3 @@ export const removeVietnamese = (value: string) => {
 
   return newStr
 }
-
-export const test = ''
