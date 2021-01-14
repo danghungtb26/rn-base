@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.6](https://github.com/danghungtb26/dvh-module/compare/@dvh-module/core@0.1.5...@dvh-module/core@0.1.6) (2021-01-14)
+
+**Note:** Version bump only for package @dvh-module/core
+
+
+
+
+
 ## [0.1.5](https://github.com/danghungtb26/dvh-module-core/compare/@dvh-module/core@0.1.4...@dvh-module/core@0.1.5) (2021-01-12)
 
 

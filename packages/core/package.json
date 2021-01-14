@@ -1,6 +1,6 @@
 {
   "name": "@dvh-module/core",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "core",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -47,7 +47,6 @@
     "url": "https://github.com/danghungtb26/dvh-module-core/issues"
   },
   "homepage": "https://github.com/danghungtb26/dvh-module-core#readme",
-  
   "devDependencies": {
     "@commitlint/config-conventional": "^11.0.0",
     "@react-native-community/eslint-config": "^2.0.0",
