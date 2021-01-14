@@ -6,7 +6,7 @@ export const formatMoney: (value: string | number) => string = value => {
   return formatNumber.toString().replace(/(\d)(?=(\d{3})+(?:\.\d+)?$)/g, '$1.')
 }
 
-export const a = ''
+// export const a = ''
 
 export const removeVietnamese = (value: string) => {
   let newStr = value
