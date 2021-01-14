@@ -1,5 +1,5 @@
 {
-  "name": "@dvh-module/native-commons",
+  "name": "@dvh-module/native-common",
   "version": "0.1.1",
   "description": "native commons",
   "main": "lib/commonjs/index",
@@ -23,29 +23,28 @@
   ],
   "scripts": {
     "test": "jest",
-    "typescript": "tsc --noEmit",
-    "lint": "eslint \"**/*.{js,ts,tsx}\"",
-    "prepare": "bob build",
-    "release": "release-it",
-    "example": "yarn --cwd example",
-    "pods": "cd example && pod-install --quiet",
-    "bootstrap": "yarn example && yarn && yarn pods"
+    "prepare": "bob build"
   },
   "keywords": [
     "react-native",
     "ios",
     "android"
   ],
-  "repository": "https://github.com/danghungtb26/dvh-module-native-commons",
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danghungtb26/dvh-module.git",
+    "directory": "packages/native-common"
+  },
   "author": "Đặng Hùng <danghungtb26@gmail.com> (https://github.com/danghungtb26)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/danghungtb26/dvh-module-native-commons/issues"
   },
   "homepage": "https://github.com/danghungtb26/dvh-module-native-commons#readme",
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
-  },
   "devDependencies": {
     "@commitlint/config-conventional": "^11.0.0",
     "@react-native-community/eslint-config": "^2.0.0",

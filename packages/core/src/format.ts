@@ -1,12 +1,12 @@
 import isNaN from 'lodash/isNaN'
 
-export const formatMoney: (value: string | number) => string = (value) => {
+export const formatMoney: (value: string | number) => string = value => {
   const formatNumber = Number(value)
   if (isNaN(formatNumber)) return '0'
   return formatNumber.toString().replace(/(\d)(?=(\d{3})+(?:\.\d+)?$)/g, '$1.')
 }
 
-// export const a = ''
+export const a = ''
 
 export const removeVietnamese = (value: string) => {
   let newStr = value

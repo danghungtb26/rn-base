@@ -24,29 +24,30 @@
   ],
   "scripts": {
     "test": "jest",
-    "typescript": "tsc --noEmit",
-    "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "prepare": "bob build",
-    "release": "release-it",
-    "clean": "rm -rf lib",
-    "example": "yarn --cwd example",
-    "pods": "cd example && pod-install --quiet"
+    "clean": "rm -rf lib"
   },
   "keywords": [
     "react-native",
     "ios",
     "android"
   ],
-  "repository": "https://github.com/danghungtb26/dvh-module-core",
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danghungtb26/dvh-module.git",
+    "directory": "packages/core"
+  },
   "author": "Đặng Hùng <danghungtb26@gmail.com> (https://github.com/danghungtb26)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/danghungtb26/dvh-module-core/issues"
   },
   "homepage": "https://github.com/danghungtb26/dvh-module-core#readme",
-  "publishConfig": {
-    "access": "public"
-  },
+  
   "devDependencies": {
     "@commitlint/config-conventional": "^11.0.0",
     "@react-native-community/eslint-config": "^2.0.0",
