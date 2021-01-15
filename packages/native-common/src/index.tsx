@@ -1,9 +1,10 @@
-import { NativeModules } from 'react-native';
+import { NativeModules } from 'react-native'
 
 type NativeCommonsType = {
-  multiply(a: number, b: number): Promise<number>;
-};
+  multiply(a: number, b: number): Promise<number>
+  add(): any
+}
 
-const { NativeCommons } = NativeModules;
+const { NativeCommons } = NativeModules
 
-export default NativeCommons as NativeCommonsType;
+export default NativeCommons as NativeCommonsType

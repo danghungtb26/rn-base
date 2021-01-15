@@ -1,10 +1,10 @@
 {
   "name": "@dvh-module/core",
-  "version": "0.1.6",
+  "version": "0.1.0",
   "description": "core",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
-  "types": "lib/typescript/index.d.ts",
+  "types": "lib/typescript/src/index.d.ts",
   "react-native": "src/index",
   "source": "src/index",
   "files": [
@@ -50,7 +50,6 @@
   "devDependencies": {
     "@commitlint/config-conventional": "^11.0.0",
     "@react-native-community/eslint-config": "^2.0.0",
-    "@release-it/conventional-changelog": "^2.0.0",
     "@types/jest": "^26.0.0",
     "@types/lodash": "^4.14.167",
     "@types/react": "^16.9.19",
@@ -59,13 +58,11 @@
     "eslint": "^7.2.0",
     "eslint-config-prettier": "^7.0.0",
     "eslint-plugin-prettier": "^3.1.3",
-    "husky": "^4.2.5",
     "jest": "^26.0.1",
     "lodash": "^4.17.20",
     "pod-install": "^0.1.0",
     "prettier": "^2.0.5",
     "react-native-builder-bob": "^0.17.1",
-    "release-it": "^14.2.2",
     "typescript": "^4.1.3"
   },
   "peerDependencies": {
@@ -78,39 +75,10 @@
       "<rootDir>/lib/"
     ]
   },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "yarn lint && yarn typescript"
-    }
-  },
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
     ]
-  },
-  "eslintIgnore": [
-    "node_modules/",
-    "lib/",
-    "babel.config.js",
-    "__tests__"
-  ],
-  "release-it": {
-    "git": {
-      "commitMessage": "chore: release ${version}",
-      "tagName": "v${version}"
-    },
-    "npm": {
-      "publish": true
-    },
-    "github": {
-      "release": true
-    },
-    "plugins": {
-      "@release-it/conventional-changelog": {
-        "preset": "angular"
-      }
-    }
   },
   "react-native-builder-bob": {
     "source": "src",
@@ -125,5 +93,6 @@
         }
       ]
     ]
-  }
+  },
+  "gitHead": "4bcdfe8a9fbb3c9465bd14dee218c26f1f883312"
 }

@@ -1,0 +1,5 @@
+{
+    "sideEffects": false,
+    "module": "../module/format/format.js",
+    "typings": "../typescript/src/format/format.d.ts"
+}

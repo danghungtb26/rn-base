@@ -296,7 +296,7 @@ PODS:
     - React-Core (= 0.63.4)
     - React-cxxreact (= 0.63.4)
     - React-jsi (= 0.63.4)
-  - splash (0.1.0):
+  - splash (0.1.2):
     - React-Core
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
@@ -460,7 +460,7 @@ SPEC CHECKSUMS:
   React-RCTText: 5c51df3f08cb9dedc6e790161195d12bac06101c
   React-RCTVibration: ae4f914cfe8de7d4de95ae1ea6cc8f6315d73d9d
   ReactCommon: 73d79c7039f473b76db6ff7c6b159c478acbbb3b
-  splash: a8e56cace823d5d1d7fb6ca3bb6f42d0424b4c7d
+  splash: 12405051ad43a558f84995991873034c1880594b
   Yoga: 4bd86afe9883422a7c4028c00e34790f560923d6
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 

@@ -8,3 +8,4 @@ babel.config.js
 */babel.config.js
 __tests__/*
 .env
+packages/*/src/__tests__/

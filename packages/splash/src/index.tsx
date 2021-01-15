@@ -1,10 +1,11 @@
-import { NativeModules } from 'react-native';
+import { NativeModules } from 'react-native'
 
 type SplashType = {
-  show: (duration?: number) => void;
-  hide: (duration?: number) => void;
-};
+  show: (duration?: number) => void
+  hide: (duration?: number) => void
+  none(): any
+}
 
-const { Splash } = NativeModules;
+const { Splash } = NativeModules
 
-export default Splash as SplashType;
+export default Splash as SplashType

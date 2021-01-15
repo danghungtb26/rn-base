@@ -1,12 +1,6 @@
 {
   "name": "react-native-dvh-module",
   "private": "true",
-  "workspaces": {
-    "packages": [
-      "packages/*",
-      "example"
-    ]
-  },
   "version": "0.1.0",
   "description": "a",
   "main": "lib/commonjs/index",

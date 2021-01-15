@@ -1,12 +1,12 @@
 import React from 'react'
 
 import { StyleSheet, View, Text } from 'react-native'
-// import Splash from '@dvh-module/splash'
+import Splash from '@dvh-module/splash'
 import { formatMoney } from '@dvh-module/core'
 
 export default function App() {
   React.useEffect(() => {
-    // Splash?.hide(0)
+    Splash?.hide(0)
   }, [])
 
   return (
