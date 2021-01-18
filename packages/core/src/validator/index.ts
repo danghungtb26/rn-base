@@ -45,7 +45,6 @@ const validator: V = (value, form) => {
       pass: false,
       error: form?.error?.length,
     }
-
   /**
    * check format theo regex
    */
