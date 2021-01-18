@@ -37,6 +37,7 @@ const validator: V = (value, form) => {
       pass: false,
       error: form?.error?.required,
     }
+
   /**
    * check length
    */
