@@ -63,4 +63,5 @@ lerna-debug.log
 */*/**[!src]**/*
 */*/*.ts
 */*/*.d.ts
-*/*/*.d.js.map
+*/*/*.js.map
+*/*/*.js
