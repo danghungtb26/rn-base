@@ -1,6 +1,6 @@
 {
   "name": "@dvh-module/core",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "core",
   "main": "lib/commonjs/index",
   "types": "lib/typescript/src/index.d.ts",
