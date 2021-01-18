@@ -23,7 +23,7 @@
   "scripts": {
     "test": "jest",
     "prepare:tsc": "bob build",
-    "prepare": "tsc --composite false",
+    "prepare": "tsc --composite false -p tsconfig.build.json",
     "clean": "rm -rf lib */index.{js,js.map,d.ts} index.{js,js.map,d.ts}"
   },
   "keywords": [
