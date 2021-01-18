@@ -4,6 +4,7 @@
     "example"
   ],
   "useWorkspaces": true,
+  "version": "independent",
   "command": {
     "publish": {
       "allowBranch": "master",
