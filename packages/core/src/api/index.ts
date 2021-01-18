@@ -26,6 +26,12 @@ export interface IResponseApi<T> {
   count?: number
 }
 
+/**
+ * tạo ra 1 func request api dựa vào axios
+ * @param baseUrl
+ * @param timeout
+ * @param languageDefault
+ */
 export const createRequest = (baseUrl: string, timeout: number, languageDefault: string) => {
   return (
     authenToken?: string | undefined,

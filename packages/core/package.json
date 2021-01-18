@@ -2,8 +2,8 @@
   "name": "@dvh-module/core",
   "version": "0.1.12",
   "description": "core",
-  "main": "lib/commonjs/index",
-  "types": "lib/typescript/src/index.d.ts",
+  "main": "index.js",
+  "types": "index.d.ts",
   "react-native": "src/index",
   "source": "src/index",
   "files": [
@@ -15,7 +15,10 @@
     "!lib/typescript/example",
     "!android/build",
     "!ios/build",
-    "!**/__tests__"
+    "!**/__tests__",
+    "index.js",
+    "index.d.ts",
+    "index.js.map"
   ],
   "scripts": {
     "test": "jest",
