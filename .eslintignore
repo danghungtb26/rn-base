@@ -12,3 +12,4 @@ packages/*/src/__tests__/
 packages/*/*/*.js
 # packages/*/*.js
 *.js
+*.d.ts
