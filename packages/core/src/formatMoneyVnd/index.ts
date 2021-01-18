@@ -5,7 +5,6 @@ import isNaN from 'lodash/isNaN'
  * đơn vị VND
  *
  * @example
- *
  * ```
  *   const money = formatMoneyVnd(1000000)
  * ```
