@@ -9,3 +9,6 @@ babel.config.js
 __tests__/*
 .env
 packages/*/src/__tests__/
+packages/*/*/*.js
+# packages/*/*.js
+*.js

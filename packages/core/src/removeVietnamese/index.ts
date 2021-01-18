@@ -1,14 +1,13 @@
-import isNaN from 'lodash/isNaN'
-
-export const formatMoney: (value: string | number) => string = value => {
-  const formatNumber = Number(value)
-  if (isNaN(formatNumber)) return '0'
-  return formatNumber.toString().replace(/(\d)(?=(\d{3})+(?:\.\d+)?$)/g, '$1.')
-}
-
-export const a = ''
-
-export const removeVietnamese = (value: string) => {
+/**
+ *  func xoá toàn bộ ký tự dấu trong tiếng việt
+ *
+ * @example
+ * ```
+ *   const newString = removeVietnamese('Tiêngs việt')
+ * ```
+ * @param value
+ */
+const removeVietnamese = (value: string) => {
   let newStr = value
   newStr = newStr.replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g, 'a')
   newStr = newStr.replace(/è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ/g, 'e')
@@ -24,7 +23,8 @@ export const removeVietnamese = (value: string) => {
   newStr = newStr.replace(/Ù|Ú|Ụ|Ủ|Ũ|Ư|Ừ|Ứ|Ự|Ử|Ữ/g, 'U')
   newStr = newStr.replace(/Ỳ|Ý|Ỵ|Ỷ|Ỹ/g, 'Y')
   newStr = newStr.replace(/Đ/g, 'D')
-  newStr = newStr.replace(/\s/g, '')
 
   return newStr
 }
+
+export default removeVietnamese

@@ -4,6 +4,7 @@
     "paths": {
       "@dvh-module/*": ["./packages/*/src"]
     },
+    "composite": true,
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
     "esModuleInterop": true,
@@ -23,7 +24,9 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "esnext",
-    "allowJs": true
+    "allowJs": true,
+    "declaration": true,
+    "sourceMap": true
   },
-  "exclude": ["lib"]
+  "exclude": ["__tests__", "lib"]
 }
