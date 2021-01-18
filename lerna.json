@@ -1,17 +1,13 @@
 {
   "packages": [
-    "packages/*",
-    "example"
+    "packages/*"
   ],
-  "npmClient": "npm",
   "useWorkspaces": true,
   "version": "independent",
   "command": {
     "publish": {
       "allowBranch": "master",
-      "createRelease": "github",
       "message": "chore: publish",
-      "conventionalCommits": true,
       "ignoreChanges": [
         "**/__fixtures__/**",
         "**/__tests__/**",
