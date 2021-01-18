@@ -1,7 +1,15 @@
 {
   "extends": "../../tsconfig",
   "compilerOptions": {
-    
+    "outDir": ".",
+    "baseUrl": "./src",
+    "declaration": true,
+    "target": "es5",
+    "allowJs": false,
+    "strict": false,
+    "alwaysStrict": true,
+    "removeComments": true,
+    "noStrictGenericChecks": true
   },
   "exclude": ["__tests__","lib", "babel.config.js"]
 }

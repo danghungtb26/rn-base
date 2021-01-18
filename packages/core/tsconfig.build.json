@@ -6,7 +6,6 @@
     "baseUrl": "./src",
     "declaration": true,
     "target": "es5",
-    "module": "commonjs",
     "allowJs": false,
     "strict": false,
     "alwaysStrict": true,
