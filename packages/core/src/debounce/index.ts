@@ -5,10 +5,10 @@
  * @param wait
  * @param immediate
  */
-const debounce = (func: (...arg: Array<any>) => void, wait: number, immediate?: boolean) => {
+const debounce = (func: (...arg: any[]) => void, wait: number, immediate?: boolean) => {
   let timeout: any
 
-  return (...args: Array<any>) => {
+  return (...args: any[]) => {
     const context = this
 
     const later = () => {
