@@ -1,5 +1,3 @@
-export default {
-  multiply(a: number, b: number) {
-    return Promise.resolve(a * b)
-  },
-}
+export * from './Box'
+export * from './Circle'
+export * from './Text'

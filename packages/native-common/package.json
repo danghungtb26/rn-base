@@ -13,13 +13,7 @@
     "android",
     "ios",
     "cpp",
-    "dvh-module-native-commons.podspec",
-    "!lib/typescript/example",
-    "!android/build",
-    "!ios/build",
-    "!**/__tests__",
-    "!**/__fixtures__",
-    "!**/__mocks__"
+    "native-common.podspec"
   ],
   "scripts": {
     "test": "jest",
@@ -68,11 +62,6 @@
     "modulePathIgnorePatterns": [
       "<rootDir>/example/node_modules",
       "<rootDir>/lib/"
-    ]
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
     ]
   },
   "react-native-builder-bob": {

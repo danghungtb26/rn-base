@@ -15,6 +15,9 @@
         "semi": false
       }
     ],
+    "no-console":"warn",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "off",
     "@typescript-eslint/member-delimiter-style": ["error", {
       "multiline": {
         "delimiter": "none",
@@ -36,6 +39,11 @@
 
   },
   "settings": {
-    "import/core-modules": ["@dvh-module/core","@dvh-module/splash"]
+    "import/core-modules": [
+        "@dvh-module/core",
+        "@dvh-module/splash",
+        "@dvh-module/native-common",
+        "@dvh-module/app-component"
+      ]
   }
 }

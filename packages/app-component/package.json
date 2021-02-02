@@ -12,14 +12,7 @@
     "lib",
     "android",
     "ios",
-    "cpp",
-    "app-component.podspec",
-    "!lib/typescript/example",
-    "!android/build",
-    "!ios/build",
-    "!**/__tests__",
-    "!**/__fixtures__",
-    "!**/__mocks__"
+    "cpp"
   ],
   "scripts": {
     "test": "jest",
@@ -47,10 +40,13 @@
   },
   "homepage": "https://github.com/danghungtb26/app-component#readme",
   "devDependencies": {
+    "@dvh-module/core": "0.1.14",
     "@types/jest": "^26.0.0",
+    "@types/lodash.capitalize": "^4.2.6",
     "@types/react": "^16.9.19",
     "@types/react-native": "0.62.13",
     "jest": "^26.0.1",
+    "lodash.capitalize": "^4.2.1",
     "react": "16.13.1",
     "react-native": "0.63.4",
     "react-native-builder-bob": "^0.17.1",

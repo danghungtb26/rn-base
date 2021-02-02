@@ -1,5 +1,5 @@
 #import <React/RCTBridgeModule.h>
 
-@interface NativeCommons : NSObject <RCTBridgeModule>
+@interface NativeCommonManager : NSObject <RCTBridgeModule>
 
 @end
