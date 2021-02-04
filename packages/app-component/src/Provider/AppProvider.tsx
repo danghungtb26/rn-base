@@ -2,9 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Appearance } from 'react-native'
 import I18njs from 'i18n-js'
 
-type colorbase = 'text' | 'background' | 'border' | 'input' | 'view'
-
-export type IColorApp = Record<colorbase, Record<string, string> | string>
+export type IColorApp = Record<string, string>
 
 type i18nbase = 'labels' | 'errors' | 'messages' | 'placeholders' | 'actions'
 
@@ -22,27 +20,9 @@ export const DefaultColor: {
   light: IColorApp
   default: IColorApp
 } = {
-  dark: {
-    text: {},
-    background: {},
-    border: {},
-    input: {},
-    view: {},
-  },
-  light: {
-    text: {},
-    background: {},
-    border: {},
-    input: {},
-    view: {},
-  },
-  default: {
-    text: {},
-    background: {},
-    border: {},
-    input: {},
-    view: {},
-  },
+  dark: {},
+  light: {},
+  default: {},
 }
 
 export const AppContext = React.createContext<IStates>({
