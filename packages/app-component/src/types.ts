@@ -146,6 +146,8 @@ export interface BoxProps extends ViewProps, BorderProps, PaddingProps, MarginPr
   bottom?: NumberOrString
   top?: number | string
   zIndex?: number
+
+  opacity?: number
 }
 
 export interface CircleProps extends BoxProps {

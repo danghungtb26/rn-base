@@ -190,7 +190,7 @@ export const usePropsForView: (props: BoxProps) => ViewProps = props => {
     right,
     left,
     bottom,
-
+    opacity,
     border,
     borderStyle,
     borderRightColor,
@@ -261,11 +261,12 @@ export const usePropsForView: (props: BoxProps) => ViewProps = props => {
       typeof zIndex === 'number' ? { zIndex } : null,
       { display: display ?? 'flex' },
       hidden && { display: 'none' },
-      removeUndifined({ position, top, right, left, bottom }),
+      removeUndifined({ position, top, right, left, bottom, opacity }),
       // @ts-ignore
       style,
     ]
   }, [
+    opacity,
     center,
     middle,
     row,
@@ -448,6 +449,7 @@ export const elevation = {
 
 export const usePropsForText: (props: TextBaseProps) => TextProps = props => {
   const {
+    opacity,
     weight,
     row,
     middle,
@@ -502,6 +504,7 @@ export const usePropsForText: (props: TextBaseProps) => TextProps = props => {
   const custom_style = useMemo<StyleProp<TextStyle>>(() => {
     return [
       {
+        opacity,
         textDecorationColor,
         textDecorationStyle,
         textDecorationLine,
@@ -544,6 +547,8 @@ export const usePropsForText: (props: TextBaseProps) => TextProps = props => {
       style,
     ]
   }, [
+    backgroundColor,
+    opacity,
     weight,
     middle,
     center,
