@@ -8,5 +8,6 @@ type SplashType = {
 }
 
 const { Splash } = NativeModules
+console.log('🚀 ~ file: index.tsx ~ line 11 ~ Splash', Splash)
 
 export default Splash as SplashType

@@ -24,13 +24,12 @@ export const Input = React.forwardRef<RefInput, ITextInputBaseProps>((props, ref
 
 export const AreaInput = React.forwardRef<RefInput, ITextInputBaseProps>((props, ref) => {
   const { rows = 1, size = 14 } = props
-  const getsize = (size || 14) * 1.2
 
   const p = usePropsForText(props)
 
   // lấy ra toàn bộ object liên quan đến
   const paddingObject = StyleSheet.flatten(p.style)
-
+  const getsize = paddingObject.lineHeight || (size || 14) * 1.2
   // giá trị default dựa vào padding hoặc là paddingvertical
   let cal: number = Number(paddingObject.paddingVertical || paddingObject.padding || 0) * 2
 
