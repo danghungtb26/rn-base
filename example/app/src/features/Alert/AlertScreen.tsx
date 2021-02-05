@@ -11,10 +11,7 @@ const AlertScreen: React.FC<IProps> = () => {
     AlertProvider.show({
       title: 'Xin chao',
       content: 'chao cai gif as chao cai gif as chao cai gif as chao cai gif as chao cai gif as',
-      actions: [
-        { text: 'xin chao 1asds', onPress: () => console.log('haha') },
-        { text: 'xin chao 2' },
-      ],
+      actions: [{ text: 'xin chao 1asds', onPress: () => {} }, { text: 'xin chao 2' }],
       cancelable: false,
     })
   return (

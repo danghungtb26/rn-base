@@ -15,7 +15,6 @@
     "test": "jest",
     "typescript": "tsc --noEmit --composite false",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
-    "prerelease": "lerna run clean",
     "precommit": "pretty-quick --staged",
     "release": "lerna publish"
   },

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 import Splash from '@dvh-module/splash'
-import { isIphoneX } from '@dvh-module/native-common'
+// import { isIphoneX } from '@dvh-module/native-common'
 import { AlertProvider, AppProvider, DefaultColor } from '@dvh-module/app-component'
 import { enableScreens } from 'react-native-screens'
 
@@ -14,7 +14,7 @@ enableScreens()
 export default () => {
   React.useEffect(() => {
     Splash?.hide(0)
-    console.log(isIphoneX())
+    // console.log(isIphoneX())
   }, [])
   const [locale, setLocale] = useState('ja')
 

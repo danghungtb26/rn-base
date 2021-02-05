@@ -1,6 +1,6 @@
 {
   "name": "@dvh-module/app-component",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "component for react native",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -40,7 +40,7 @@
   },
   "homepage": "https://github.com/danghungtb26/app-component#readme",
   "devDependencies": {
-    "@dvh-module/core": "0.1.14",
+    "@dvh-module/core": "^0.1.15",
     "@types/i18n-js": "^3.8.0",
     "@types/jest": "^26.0.0",
     "@types/lodash.capitalize": "^4.2.6",
@@ -51,9 +51,9 @@
     "lodash.capitalize": "^4.2.1",
     "react": "16.13.1",
     "react-native": "0.63.4",
-    "react-native-reanimated": "^1.13.2",
     "react-native-builder-bob": "^0.17.1",
     "react-native-fast-image": "^8.3.4",
+    "react-native-reanimated": "^1.13.2",
     "typescript": "^4.1.3"
   },
   "peerDependencies": {
