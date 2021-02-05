@@ -1,6 +1,6 @@
 {
   "name": "@dvh-module/core",
-  "version": "0.1.15",
+  "version": "0.1.16",
   "description": "core",
   "main": "index.js",
   "types": "index.d.ts",
