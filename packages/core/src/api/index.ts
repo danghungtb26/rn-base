@@ -12,6 +12,7 @@ const source = CancelToken.source()
 
 export interface IResponseApi<T> {
   success?: boolean
+
   // thanh cong
   data?: T
   // that bai
