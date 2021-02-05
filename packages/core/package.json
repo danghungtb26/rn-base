@@ -22,7 +22,7 @@
   ],
   "scripts": {
     "test": "jest",
-    "prepare": "tsc --composite false -p tsconfig.build.json",
+    "prepare": "yarn clean && tsc --composite false -p tsconfig.build.json",
     "clean": "rm -rf lib */index.{js,js.map,d.ts} index.{js,js.map,d.ts}"
   },
   "keywords": [
@@ -64,5 +64,5 @@
     "react": "*",
     "react-native": "*"
   },
-  "gitHead": "4bcdfe8a9fbb3c9465bd14dee218c26f1f883312"
+  "gitHead": "f5b7aa17c30df91d73df20205df161057b5332c4"
 }

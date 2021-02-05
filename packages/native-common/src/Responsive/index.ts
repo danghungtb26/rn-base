@@ -9,6 +9,7 @@ const SCREEN_HEIGHT = height - getOffset().top - getOffset().bottom
 let fixed_width = 375
 let fixed_height = 812 - 78
 
+//
 export const setDimensions: (w: number, h: number) => void = (w, h) => {
   fixed_width = w
   fixed_height = h
