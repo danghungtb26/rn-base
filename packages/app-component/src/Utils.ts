@@ -209,6 +209,8 @@ export const usePropsForView: (props: BoxProps) => ViewProps = props => {
 
   const style_custom = useMemo<StyleProp<ViewStyle>>(() => {
     return [
+      justifyContent ? { justifyContent } : null,
+      alignItems ? { alignItems } : null,
       flex ? { flex } : null,
       center && styles.center,
       middle && styles.middle,
@@ -256,8 +258,7 @@ export const usePropsForView: (props: BoxProps) => ViewProps = props => {
       typeof shrink === 'number' ? { flexShrink: shrink } : null,
       wrap ? { flexWrap: wrap } : null,
       typeof basis === 'number' ? { flexBasis: grow } : null,
-      justifyContent ? { justifyContent } : null,
-      alignItems ? { alignItems } : null,
+
       typeof zIndex === 'number' ? { zIndex } : null,
       { display: display ?? 'flex' },
       hidden && { display: 'none' },

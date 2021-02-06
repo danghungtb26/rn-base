@@ -17,13 +17,14 @@ export const Input = React.forwardRef<RefInput, ITextInputBaseProps>((props, ref
       autoCorrect={false}
       spellCheck={false}
       contextMenuHidden
+      textAlign={props.textAlign}
       {...p}
     />
   )
 })
 
 export const AreaInput = React.forwardRef<RefInput, ITextInputBaseProps>((props, ref) => {
-  const { rows = 1, size = 14 } = props
+  const { rows = 1, size = 14, textAlign } = props
 
   const p = usePropsForText(props)
 
@@ -51,5 +52,5 @@ export const AreaInput = React.forwardRef<RefInput, ITextInputBaseProps>((props,
 
   const height = getsize * rows + cal
 
-  return <Input ref={ref} multiline height={height} size={size} {...p} />
+  return <Input textAlign={textAlign} ref={ref} multiline height={height} size={size} {...p} />
 })

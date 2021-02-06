@@ -1,9 +1,8 @@
-import { Box, Text } from '@dvh-module/app-component'
+import { Box, Text, TouchSingle } from '@dvh-module/app-component'
 import React from 'react'
 import { FlatList, StyleSheet } from 'react-native'
 
 import { HomeScreenNavigationProps, routes } from '../../navigator/routes'
-import { TouchableOpacity } from 'react-native-gesture-handler'
 
 interface IProps extends HomeScreenNavigationProps {}
 
@@ -18,6 +17,11 @@ const features_example = [
     title: 'Text screen',
     route: routes.Text,
   },
+  {
+    key: 3,
+    title: 'Button screen',
+    route: routes.Button,
+  },
 ]
 
 const HomeScreen: React.FC<IProps> = ({ navigation }) => {
@@ -27,11 +31,11 @@ const HomeScreen: React.FC<IProps> = ({ navigation }) => {
         data={features_example}
         keyExtractor={item => `${item.key}`}
         renderItem={({ item }) => (
-          <TouchableOpacity onPress={() => navigation.push(item.route)}>
+          <TouchSingle onPress={() => navigation.push(item.route)}>
             <Text size={14} padding={12}>
               {item.title}
             </Text>
-          </TouchableOpacity>
+          </TouchSingle>
         )}
         ItemSeparatorComponent={() => (
           <Box width="100%" color="#424242" height={StyleSheet.hairlineWidth} />

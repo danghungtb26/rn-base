@@ -7,12 +7,14 @@ export type RootNavigationParamList = {
     id?: number
   }
   Alert: undefined
+  Button: undefined
 }
 
 export const routes: Record<keyof RootNavigationParamList, keyof RootNavigationParamList> = {
   Home: 'Home',
   Text: 'Text',
   Alert: 'Alert',
+  Button: 'Button',
 }
 
 export interface HomeScreenNavigationProps {
@@ -28,4 +30,9 @@ export interface TextScreenNavigationProps {
 export interface AlertScreenNavigationProps {
   navigation: StackNavigationProp<RootNavigationParamList, 'Alert'>
   route: RouteProp<RootNavigationParamList, 'Alert'>
+}
+
+export interface ButtonScreenNavigationProps {
+  navigation: StackNavigationProp<RootNavigationParamList, 'Button'>
+  route: RouteProp<RootNavigationParamList, 'Button'>
 }

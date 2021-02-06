@@ -18,14 +18,15 @@
     "no-console":"warn",
     "no-unused-vars": "off",
     "@typescript-eslint/no-unused-vars": "off",
+    
     "@typescript-eslint/member-delimiter-style": ["error", {
       "multiline": {
         "delimiter": "none",
         "requireLast": true
       },
       "singleline": {
-          // "delimiter": "comma",
-          "requireLast": true
+          // "delimiter": "none",
+          "requireLast": false
       },
       "overrides": {
           "interface": {

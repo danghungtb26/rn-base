@@ -87,13 +87,11 @@ export const AppProvider: React.FC<{
   }
 
   useEffect(() => {
-    const sub = Appearance.addChangeListener(changeColor)
+    Appearance.addChangeListener(changeColor)
 
-    return sub
-      ? sub.remove()
-      : () => {
-          Appearance.removeChangeListener(changeColor)
-        }
+    return () => {
+      Appearance.removeChangeListener(changeColor)
+    }
   })
 
   return (

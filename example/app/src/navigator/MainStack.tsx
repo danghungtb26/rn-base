@@ -4,6 +4,7 @@ import { RootNavigationParamList, routes } from './routes'
 import HomeScreen from '../features/Home'
 import TextScreen from '../features/Text'
 import { AlertScreen } from '../features/Alert'
+import ButtonScreen from '../features/Button'
 const Stack = createStackNavigator<RootNavigationParamList>()
 
 const MainStack = () => {
@@ -12,6 +13,7 @@ const MainStack = () => {
       <Stack.Screen name={routes.Home} component={HomeScreen} />
       <Stack.Screen name={routes.Text} component={TextScreen} />
       <Stack.Screen name={routes.Alert} component={AlertScreen} />
+      <Stack.Screen name={routes.Button} component={ButtonScreen} />
     </Stack.Navigator>
   )
 }

@@ -187,7 +187,9 @@ export interface TextBaseProps extends Omit<BoxProps, 'style' | 'children' | 'sh
   backgroundColor?: string
 }
 
-export interface ITextInputBaseProps extends TextInputProps, TextBaseProps {
+export interface ITextInputBaseProps
+  extends TextInputProps,
+    Omit<TextBaseProps, 'children' | 'style' | 'textAlign'> {
   /**
    * backgroundColor cho input
    *
