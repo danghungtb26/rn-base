@@ -7,6 +7,9 @@ export interface TouchSingleProps extends PressableProps {
   delay?: number
 }
 
+/**
+ * component touch 1 lan (Chặn việc click liên tục)
+ */
 const TouchSingle = React.forwardRef<RefView, TouchSingleProps>(
   (
     {
