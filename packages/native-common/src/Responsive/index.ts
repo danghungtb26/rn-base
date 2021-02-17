@@ -24,31 +24,19 @@ const hscale: number = SCREEN_HEIGHT / fixed_height
  * @param size
  */
 
-export const widthLize: (size: number | number[], w?: number) => number | number[] = (size, w) => {
-  if (Array.isArray(size)) {
-    return size.map(i => widthLize(i, w) as number)
+export const widthLize: (size: number, w?: number) => number = (size, w) => {
+  const newSize = size * (w || wscale)
+  if (Platform.OS === 'ios') {
+    return Math.round(PixelRatio.roundToNearestPixel(newSize))
   }
-
-  if (typeof size === 'number') {
-    const newSize = size * (w || wscale)
-    if (Platform.OS === 'ios') {
-      return Math.round(PixelRatio.roundToNearestPixel(newSize))
-    }
-    return Math.round(PixelRatio.roundToNearestPixel(newSize)) - 2
-  }
-
-  return size
+  return Math.round(PixelRatio.roundToNearestPixel(newSize)) - 2
 }
 
 /**
  * func tính toán lại height theo kích thước của device
  * @param size
  */
-export const heightLize: (size: number | number[], h?: number) => number | number[] = (size, h) => {
-  if (Array.isArray(size)) {
-    return size.map(i => heightLize(i, h)) as number[]
-  }
-
+export const heightLize: (size: number, h?: number) => number = (size, h) => {
   const newSize = size * (h || hscale)
   if (Platform.OS === 'ios') {
     return Math.round(PixelRatio.roundToNearestPixel(newSize))

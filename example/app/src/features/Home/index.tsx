@@ -1,5 +1,5 @@
 import { Box, Text, TouchSingle, useColors } from '@dvh-module/app-component'
-import { fontSizeLine } from '@dvh-module/native-common'
+import { widthLize } from '@dvh-module/native-common'
 import React from 'react'
 import { FlatList, StyleSheet } from 'react-native'
 
@@ -34,7 +34,7 @@ const HomeScreen: React.FC<IProps> = ({ navigation }) => {
         keyExtractor={item => `${item.key}`}
         renderItem={({ item }) => (
           <TouchSingle onPress={() => navigation.push(item.route)}>
-            <Text size={fontSizeLine(14)} padding={12}>
+            <Text size={widthLize(12) as number} padding={12}>
               {item.title}
             </Text>
           </TouchSingle>
