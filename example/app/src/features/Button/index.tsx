@@ -17,7 +17,7 @@ const ButtonScreen: React.FC<IProps> = () => {
           children,
           ...props
         }: TouchableOpacityProps & { children: any }) => (
-          <TouchableOpacity ref={refa} {...props}>
+          <TouchableOpacity ref={refa} {...(props as typeof TouchableOpacity)}>
             <Box
               style={{ backgroundColor: '#fff', alignItems: 'center' }}
               color="#fff"

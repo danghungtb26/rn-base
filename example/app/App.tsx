@@ -22,7 +22,12 @@ export default () => {
     <AlertProvider>
       <AppProvider
         locale={locale}
-        colors={DefaultColor}
+        colors={{
+          ...DefaultColor,
+          default: {
+            primary: '#fff',
+          },
+        }}
         onChangeLocale={v => setLocale(v)}
         translations={{
           vi: {

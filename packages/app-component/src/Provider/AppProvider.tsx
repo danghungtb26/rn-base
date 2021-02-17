@@ -45,9 +45,9 @@ export const useI18nLocale: () => string = () => {
   return React.useContext(AppContext).i18nLocale
 }
 
-export const useColors: () => IColorApp = () => {
+export const useColors: <T extends IColorApp>() => T = () => {
   const { colors: color } = React.useContext(AppContext)
-  return color
+  return color as any
 }
 
 I18njs.fallbacks = false

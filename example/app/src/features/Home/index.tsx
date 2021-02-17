@@ -1,4 +1,4 @@
-import { Box, Text, TouchSingle } from '@dvh-module/app-component'
+import { Box, Text, TouchSingle, useColors } from '@dvh-module/app-component'
 import React from 'react'
 import { FlatList, StyleSheet } from 'react-native'
 
@@ -25,8 +25,9 @@ const features_example = [
 ]
 
 const HomeScreen: React.FC<IProps> = ({ navigation }) => {
+  const colors = useColors<{ primary: string }>()
   return (
-    <Box flex={1}>
+    <Box flex={1} color={colors.primary}>
       <FlatList
         data={features_example}
         keyExtractor={item => `${item.key}`}
