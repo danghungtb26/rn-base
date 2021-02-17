@@ -165,7 +165,7 @@ export interface TextBaseProps extends Omit<BoxProps, 'style' | 'children' | 'sh
 
   fontStyle?: 'normal' | 'italic'
 
-  fontFamily?: 'string'
+  fontFamily?: string
 
   textDecorationLine?: 'none' | 'underline' | 'line-through' | 'underline line-through'
   textDecorationStyle?: 'solid' | 'double' | 'dotted' | 'dashed'
