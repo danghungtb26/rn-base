@@ -1,6 +1,6 @@
 {
   "name": "@dvh-module/app-component",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "component for react native",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -40,7 +40,7 @@
   },
   "homepage": "https://github.com/danghungtb26/app-component#readme",
   "devDependencies": {
-    "@dvh-module/core": "^0.1.19",
+    "@dvh-module/core": "^0.1.20",
     "@types/i18n-js": "^3.8.0",
     "@types/jest": "^26.0.0",
     "@types/lodash.capitalize": "^4.2.6",
