@@ -498,24 +498,25 @@ export const usePropsForText: (props: TextBaseProps) => TextProps = props => {
     textAlign,
 
     fontStyle,
+    fontFamily,
     textTransform,
 
     ...restProps
   } = props
   const custom_style = useMemo<StyleProp<TextStyle>>(() => {
     return [
-      {
+      removeUndifined({
         opacity,
         textDecorationColor,
         textDecorationStyle,
         textDecorationLine,
 
         textAlign,
-
+        fontFamily,
         fontStyle,
         textTransform,
         backgroundColor,
-      },
+      }),
       center && { textAlign: 'center' },
       middle && { textAlignVertical: 'center' },
       size !== undefined ? { fontSize: size } : null,
