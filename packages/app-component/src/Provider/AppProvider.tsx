@@ -4,9 +4,9 @@ import I18njs from 'i18n-js'
 
 export type IColorApp = Record<string, string>
 
-type i18nbase = 'labels' | 'errors' | 'messages' | 'placeholders' | 'actions'
+type i18nbase = 'labels' | 'errors' | 'messages' | 'placeholders' | 'actions' | 'languages'
 
-export type I18nApp = Record<i18nbase, Record<string, string>>
+export type I18nApp = Record<i18nbase, Record<string, string | Record<string, string>>>
 
 interface IStates {
   i18n: typeof I18njs

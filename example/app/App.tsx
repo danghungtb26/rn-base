@@ -38,6 +38,7 @@ export default () => {
             errors: {},
             messages: {},
             placeholders: {},
+            languages: {},
           },
           ja: {
             labels: {
@@ -47,6 +48,7 @@ export default () => {
             errors: {},
             messages: {},
             placeholders: {},
+            languages: {},
           },
         }}>
         <SafeAreaProvider>
