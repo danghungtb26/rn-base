@@ -1,2 +1,2 @@
 export { default as TouchSingle } from './TouchSingle'
-export * from './TouchRipple'
+export { default as TouchRipple } from './TouchRipple'
