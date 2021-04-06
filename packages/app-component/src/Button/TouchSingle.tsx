@@ -20,7 +20,7 @@ const TouchSingle = React.forwardRef<RefView, TouchSingleProps>(
     },
     ref
   ) => {
-    const last_time = useRef<number>(Date.now())
+    const last_time = useRef<number>(-delay)
     const press = (event: GestureResponderEvent) => {
       if (Date.now() - last_time.current >= delay * 0.9) {
         last_time.current = Date.now()
