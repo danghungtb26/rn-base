@@ -2,7 +2,7 @@
 import React, { useCallback, useEffect } from 'react'
 import { TouchableOpacity, StyleSheet, View } from 'react-native'
 import Animated from 'react-native-reanimated'
-import { Text } from '@dvh-module/app-component'
+import { Text } from '../Text'
 import type { AlertContent } from './types'
 
 const { spring, useValue, Extrapolate } = Animated

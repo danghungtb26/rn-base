@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import Splash from '@dvh-module/splash'
 // import { isIphoneX } from '@dvh-module/native-common'
-import { AlertProvider, AppProvider, DefaultColor } from '@dvh-module/app-component'
+import { AlertProvider, AppProvider, DefaultColor } from '@dvh-module/element'
 import { enableScreens } from 'react-native-screens'
 
 import { SafeAreaProvider } from 'react-native-safe-area-context'

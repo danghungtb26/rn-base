@@ -44,7 +44,7 @@
         "@dvh-module/core",
         "@dvh-module/splash",
         "@dvh-module/native-common",
-        "@dvh-module/app-component"
+        "@dvh-module/element"
       ]
   }
 }

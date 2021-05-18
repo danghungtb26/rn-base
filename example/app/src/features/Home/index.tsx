@@ -1,4 +1,4 @@
-import { Box, Text, TouchSingle, useColors } from '@dvh-module/app-component'
+import { Box, Text, TouchSingle, useColors } from '@dvh-module/element'
 import { widthLize } from '@dvh-module/native-common'
 import React from 'react'
 import { FlatList, StyleSheet } from 'react-native'

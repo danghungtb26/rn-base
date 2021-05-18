@@ -1,4 +1,4 @@
-import { Box } from '@dvh-module/app-component'
+import { Box } from '../Box'
 import React, { useState } from 'react'
 
 import Alert from './Alert'

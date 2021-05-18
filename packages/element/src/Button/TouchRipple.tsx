@@ -1,4 +1,5 @@
-import { Box, RefView } from '@dvh-module/app-component'
+import type { RefView } from '../types'
+import { Box } from '../Box'
 import React, { useEffect, useRef, useState } from 'react'
 import {
   GestureResponderEvent,
