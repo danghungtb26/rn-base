@@ -102,6 +102,24 @@ export const createRequest = (baseUrl: string, timeout: number, languageDefault:
         }),
 
       /**
+       * func put
+       * override option request
+       */
+      patch: <T = any, R = AxiosResponse<T>>(
+        url: string,
+        data?: any,
+        options: AxiosRequestConfig = {}
+      ) =>
+        axios.patch<T, R>(url, data, {
+          ...defaultOptions,
+          ...options,
+          headers: {
+            ...defaultOptions.headers,
+            ...options?.headers,
+          },
+        }),
+
+      /**
        * func delete
        * override option request
        */
