@@ -11,7 +11,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @rn-base/core
 
-## [0.1.1](https://github.com/danghungtb26/dvh-module/compare/@rn-base/core@0.1.6...@rn-base/core@0.1.1) (2021-01-18)
+## [0.1.2](https://github.com/danghungtb26/dvh-module/compare/@rn-base/core@0.1.6...@rn-base/core@0.1.2) (2021-01-18)
 
 **Note:** Version bump only for package @rn-base/core
 
@@ -72,10 +72,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @rn-base/core
 
-## [0.1.2](https://github.com/danghungtb26/dvh-module-core/compare/@rn-base/core@0.1.1...@rn-base/core@0.1.2) (2021-01-12)
+## [0.1.2](https://github.com/danghungtb26/dvh-module-core/compare/@rn-base/core@0.1.2...@rn-base/core@0.1.2) (2021-01-12)
 
 **Note:** Version bump only for package @rn-base/core
 
-## 0.1.1 (2021-01-12)
+## 0.1.2 (2021-01-12)
 
 **Note:** Version bump only for package @rn-base/core

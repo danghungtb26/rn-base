@@ -27,11 +27,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.9 (2021-01-14)
 
-## [0.1.2](https://github.com/danghungtb26/dvh-module/compare/@rn-base/splash@0.1.1...@rn-base/splash@0.1.2) (2021-01-14)
+## [0.1.2](https://github.com/danghungtb26/dvh-module/compare/@rn-base/splash@0.1.2...@rn-base/splash@0.1.2) (2021-01-14)
 
 **Note:** Version bump only for package @rn-base/splash
 
-## 0.1.1 (2021-01-12)
+## 0.1.2 (2021-01-12)
 
 ### Bug Fixes
 

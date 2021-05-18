@@ -309,7 +309,7 @@ PODS:
     - React-Core (= 0.63.4)
     - React-cxxreact (= 0.63.4)
     - React-jsi (= 0.63.4)
-  - RNCMaskedView (0.1.10):
+  - RNCMaskedView (0.1.20):
     - React
   - RNFastImage (8.3.4):
     - React-Core

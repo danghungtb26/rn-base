@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@react-native-community/cli": "^4.13.1",
-    "@react-native-community/masked-view": "^0.1.10",
+    "@react-native-community/masked-view": "^0.1.20",
     "@react-navigation/core": "^5.15.1",
     "@react-navigation/native": "^5.9.2",
     "@react-navigation/stack": "^5.14.2",
