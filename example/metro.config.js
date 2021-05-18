@@ -33,7 +33,7 @@ const modules = ['']
   .filter(
     (m, i, self) =>
       // Remove duplicates and package names of the packages in the monorepo
-      self.lastIndexOf(m) === i && !m.startsWith('@dvh-module/')
+      self.lastIndexOf(m) === i && !m.startsWith('@dvh/')
   );
 
 module.exports = {

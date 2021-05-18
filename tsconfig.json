@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@dvh-module/*": ["./packages/*/src"]
+      "@dvh/*": ["./packages/*/src"]
     },
     "composite": true,
     "allowUnreachableCode": false,

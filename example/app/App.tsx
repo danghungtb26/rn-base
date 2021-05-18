@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 
-import Splash from '@dvh-module/splash'
-// import { isIphoneX } from '@dvh-module/native-common'
-import { AlertProvider, AppProvider, DefaultColor } from '@dvh-module/element'
+import Splash from '@dvh/splash'
+// import { isIphoneX } from '@dvh/native-common'
+import { AlertProvider, AppProvider, DefaultColor } from '@dvh/element'
 import { enableScreens } from 'react-native-screens'
 
 import { SafeAreaProvider } from 'react-native-safe-area-context'

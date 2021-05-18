@@ -1,5 +1,5 @@
 import { StyleProp, StyleSheet, TextProps, TextStyle, ViewProps, ViewStyle } from 'react-native'
-import removeUndifined from '@dvh-module/core/removeUndifined'
+import removeUndifined from '@dvh/core/removeUndifined'
 import type {
   BoxProps,
   ShadowProps,

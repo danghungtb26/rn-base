@@ -1,5 +1,5 @@
 {
-  "name": "@dvh-module/element",
+  "name": "@dvh/element",
   "version": "0.1.0",
   "description": "component for react native",
   "main": "lib/commonjs/index",
@@ -40,7 +40,7 @@
   },
   "homepage": "https://github.com/danghungtb26/app-component#readme",
   "devDependencies": {
-    "@dvh-module/core": "^0.1.22",
+    "@dvh/core": "^0.1.22",
     "@types/i18n-js": "^3.8.0",
     "@types/jest": "^26.0.0",
     "@types/lodash.capitalize": "^4.2.6",

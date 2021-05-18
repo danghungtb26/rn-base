@@ -1,5 +1,5 @@
-import { Box, Text, TouchSingle, useColors } from '@dvh-module/element'
-import { widthLize } from '@dvh-module/native-common'
+import { Box, Text, TouchSingle, useColors } from '@dvh/element'
+import { widthLize } from '@dvh/native-common'
 import React from 'react'
 import { FlatList, StyleSheet } from 'react-native'
 

@@ -5,4 +5,4 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.1.1 (2021-01-18)
 
-**Note:** Version bump only for package @dvh-module/app-component
+**Note:** Version bump only for package @dvh/app-component

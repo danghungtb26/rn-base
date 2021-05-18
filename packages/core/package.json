@@ -1,5 +1,5 @@
 {
-  "name": "@dvh-module/core",
+  "name": "@dvh/core",
   "version": "0.1.22",
   "description": "core",
   "main": "index.js",
