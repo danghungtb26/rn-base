@@ -2,8 +2,8 @@
 
 import React, { useRef } from 'react'
 import { Pressable } from 'react-native'
-import { Box, Text } from '@dvh/element'
-import type { TextBaseProps } from '@dvh/element'
+import { Box, Text } from '@rn-base/element'
+import type { TextBaseProps } from '@rn-base/element'
 import Animated, { timing, useValue, Easing } from 'react-native-reanimated'
 
 const BoxA = Animated.createAnimatedComponent(Box)

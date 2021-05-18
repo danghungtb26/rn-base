@@ -2,7 +2,7 @@ import React from 'react'
 import { Text, View, Alert } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import type { AlertScreenNavigationProps } from '../../navigator/routes'
-import { AlertProvider } from '@dvh/element'
+import { AlertProvider } from '@rn-base/element'
 
 interface IProps extends AlertScreenNavigationProps {}
 

@@ -1,4 +1,4 @@
-import { Box } from '@dvh/element'
+import { Box } from '@rn-base/element'
 import React from 'react'
 import { Text, View } from 'react-native'
 import type { TextScreenNavigationProps } from '../../navigator/routes'

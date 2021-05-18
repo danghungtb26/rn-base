@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@dvh/*": ["./packages/*/src"]
+      "@rn-base/*": ["./packages/*/src"]
     },
     "composite": true,
     "allowUnreachableCode": false,

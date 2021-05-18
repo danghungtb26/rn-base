@@ -49,7 +49,7 @@ Remember to add tests for your change if possible. Run the unit tests by:
 yarn test
 ```
 
-To edit the Objective-C files, open `example/ios/CoreExample.xcworkspace` in XCode and find the source files at `Pods > Development Pods > @dvh/core`.
+To edit the Objective-C files, open `example/ios/CoreExample.xcworkspace` in XCode and find the source files at `Pods > Development Pods > @rn-base/core`.
 
 To edit the Kotlin files, open `example/android` in Android studio and find the source files at `dvhmodulecore` under `Android`.
 

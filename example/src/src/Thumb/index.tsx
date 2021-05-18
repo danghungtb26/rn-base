@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react'
-import { Box } from '@dvh/element'
+import { Box } from '@rn-base/element'
 import { StyleSheet, ActivityIndicator, ViewStyle } from 'react-native'
 import FastImage from 'react-native-fast-image'
 

@@ -1,17 +1,17 @@
-# @dvh/native-commons
+# @rn-base/native-commons
 
 native commons
 
 ## Installation
 
 ```sh
-npm install @dvh/native-commons
+npm install @rn-base/native-commons
 ```
 
 ## Usage
 
 ```js
-import NativeCommons from '@dvh/native-commons';
+import NativeCommons from '@rn-base/native-commons';
 
 // ...
 

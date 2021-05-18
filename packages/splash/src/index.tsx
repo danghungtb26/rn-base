@@ -1,5 +1,5 @@
 import { NativeModules } from 'react-native'
-// import moduleName from '@dvh'
+// import moduleName from '@rn-base'
 
 type SplashType = {
   show: (duration?: number) => void

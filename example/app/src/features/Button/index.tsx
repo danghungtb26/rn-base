@@ -1,4 +1,4 @@
-import { Box, Text, TouchSingle } from '@dvh/element'
+import { Box, Text, TouchSingle } from '@rn-base/element'
 import React from 'react'
 import { TouchableOpacityProps, View } from 'react-native'
 

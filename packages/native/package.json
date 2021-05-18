@@ -1,5 +1,5 @@
 {
-  "name": "@dvh/native-common",
+  "name": "@rn-base/native",
   "version": "0.1.0",
   "description": "native commons",
   "main": "lib/commonjs/index",

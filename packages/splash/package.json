@@ -1,5 +1,5 @@
 {
-  "name": "@dvh/splash",
+  "name": "@rn-base/splash",
   "version": "0.1.0",
   "description": "a",
   "main": "lib/commonjs/index.js",

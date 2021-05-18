@@ -1,5 +1,5 @@
 {
-  "name": "@dvh/core",
+  "name": "@rn-base/core",
   "version": "0.1.0",
   "description": "core",
   "main": "index.js",

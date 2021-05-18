@@ -41,10 +41,10 @@
   },
   "settings": {
     "import/core-modules": [
-        "@dvh/core",
-        "@dvh/splash",
-        "@dvh/native-common",
-        "@dvh/element"
+        "@rn-base/core",
+        "@rn-base/splash",
+        "@rn-base/native",
+        "@rn-base/element"
       ]
   }
 }

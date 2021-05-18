@@ -1,17 +1,17 @@
-# @dvh/core
+# @rn-base/core
 
 core
 
 ## Installation
 
 ```sh
-npm install @dvh/core
+npm install @rn-base/core
 ```
 
 ## Usage
 
 ```js
-import Core from '@dvh/core';
+import Core from '@rn-base/core';
 
 // ...
 
