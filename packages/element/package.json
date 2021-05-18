@@ -1,6 +1,6 @@
 {
   "name": "@dvh-module/element",
-  "version": "0.1.16",
+  "version": "0.1.0",
   "description": "component for react native",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
