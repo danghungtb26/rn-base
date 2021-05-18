@@ -1,4 +1,4 @@
-import axios, { AxiosRequestConfig, CancelTokenSource } from 'axios'
+import axios, { AxiosRequestConfig, AxiosResponse, CancelTokenSource } from 'axios'
 
 export interface IParamBase {
   authen?: string
@@ -56,8 +56,8 @@ export const createRequest = (baseUrl: string, timeout: number, languageDefault:
        * func get
        * override option request
        */
-      get: (url: string, options: AxiosRequestConfig = {}) =>
-        axios.get(url, {
+      get: <T = any, R = AxiosResponse<T>>(url: string, options: AxiosRequestConfig = {}) =>
+        axios.get<T, R>(url, {
           ...defaultOptions,
           ...options,
           headers: {
@@ -69,8 +69,12 @@ export const createRequest = (baseUrl: string, timeout: number, languageDefault:
        * func post
        * override option request
        */
-      post: (url: string, data?: any, options: AxiosRequestConfig = {}) => {
-        return axios.post(url, data, {
+      post: <T = any, R = AxiosResponse<T>>(
+        url: string,
+        data?: any,
+        options: AxiosRequestConfig = {}
+      ) => {
+        return axios.post<T, R>(url, data, {
           ...defaultOptions,
           ...options,
           headers: {
@@ -83,8 +87,12 @@ export const createRequest = (baseUrl: string, timeout: number, languageDefault:
        * func put
        * override option request
        */
-      put: (url: string, data?: any, options: AxiosRequestConfig = {}) =>
-        axios.put(url, data, {
+      put: <T = any, R = AxiosResponse<T>>(
+        url: string,
+        data?: any,
+        options: AxiosRequestConfig = {}
+      ) =>
+        axios.put<T, R>(url, data, {
           ...defaultOptions,
           ...options,
           headers: {
@@ -97,8 +105,8 @@ export const createRequest = (baseUrl: string, timeout: number, languageDefault:
        * func delete
        * override option request
        */
-      delete: (url: string, options: AxiosRequestConfig = {}) =>
-        axios.delete(url, {
+      delete: <T = any, R = AxiosResponse<T>>(url: string, options: AxiosRequestConfig = {}) =>
+        axios.delete<T, R>(url, {
           ...defaultOptions,
           ...options,
           headers: {
