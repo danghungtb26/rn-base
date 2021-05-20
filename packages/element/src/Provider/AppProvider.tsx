@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Appearance } from 'react-native'
+import { Appearance, StyleSheet } from 'react-native'
 import I18njs from 'i18n-js'
 
 export type IColorApp = Record<string, string>
@@ -48,6 +48,22 @@ export const useI18nLocale: () => string = () => {
 export const useColors: <T extends IColorApp>() => T = () => {
   const { colors: color } = React.useContext(AppContext)
   return color as any
+}
+
+export const makeStyle: <
+  C extends IColorApp,
+  T extends StyleSheet.NamedStyles<T> | StyleSheet.NamedStyles<any> = StyleSheet.NamedStyles<any>
+>(
+  input: T | ((theme: { colors: C }) => T)
+) => () => StyleSheet.NamedStyles<T> = input => {
+  if (typeof input === 'function') {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const colors = useColors()
+    // @ts-ignore
+    return () => input({ colors })
+  }
+
+  return () => input
 }
 
 I18njs.fallbacks = false
