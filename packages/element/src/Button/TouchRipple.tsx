@@ -8,7 +8,7 @@ import {
   PressableProps,
   StyleSheet,
 } from 'react-native'
-import Animated, { Easing } from 'react-native-reanimated'
+import Animated, { EasingNode } from 'react-native-reanimated'
 
 const { timing } = Animated
 
@@ -170,7 +170,7 @@ const TouchRipple = React.forwardRef<RefView, TouchRippleProps>(
         timing(ripple.progress, {
           toValue: 1,
           duration,
-          easing: Easing.in(Easing.ease),
+          easing: EasingNode.in(EasingNode.ease),
         }).start(() => {
           // do tại đây bị gọi 2 lần, nên cần đặt biến chặn ko cho gọi nữa
           if (!checkFinished) {
