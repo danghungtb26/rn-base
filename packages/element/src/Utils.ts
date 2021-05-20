@@ -485,6 +485,21 @@ export const usePropsForText: (props: TextBaseProps) => TextProps = props => {
       padding,
     }),
     // lấy ra thông tin style border
+    getBorder({
+      borderStyle,
+      border,
+      borderRightColor,
+      borderRightWidth,
+      borderWidth,
+      borderBottomColor,
+      borderBottomWidth,
+      borderColor,
+      borderLeftColor,
+      borderLeftWidth,
+      borderTopColor,
+      borderTopWidth,
+    }),
+
     lineHeight ? { lineHeight } : {},
     { fontWeight: weight },
 
