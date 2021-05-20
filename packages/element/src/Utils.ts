@@ -466,6 +466,7 @@ export const usePropsForText: (props: TextBaseProps) => TextProps = props => {
     color !== undefined ? { color } : null,
     (typeof width === 'number' || typeof width === 'string') && { width },
     (typeof height === 'number' || typeof height === 'string') && { height },
+    getRadius(radius),
     getMargin({
       margin,
       marginBottom,
