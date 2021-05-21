@@ -23,6 +23,11 @@ const features_example = [
     title: 'Button screen',
     route: routes.Button,
   },
+  {
+    key: 4,
+    title: 'Input screen',
+    route: routes.Input,
+  },
 ]
 
 const HomeScreen: React.FC<IProps> = ({ navigation }) => {

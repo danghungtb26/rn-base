@@ -99,6 +99,7 @@ const RippleComponent: React.FC<RippleProps> = ({
     }),
     backgroundColor: color,
   }
+  // @ts-ignore
   return <Animated.View pointerEvents="box-only" key={unique} style={[styles.ripple, style]} />
 }
 

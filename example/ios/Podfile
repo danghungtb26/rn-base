@@ -9,13 +9,14 @@ target 'ExampleExample' do
   use_react_native!(path: '../../node_modules/react-native')
 
   pod 'splash', path: '../../packages/splash'
-  pod 'native-common', path: '../../packages/native-common'
+  pod 'rn-base-native', path: '../../packages/native/rn-base-native.podspec'
+  pod 'rn-base-input-filter', path: '../../packages/input-filter/rn-base-input-filter.podspec'
 
   # Enables Flipper.
   #
   # Note that if you have use_frameworks! enabled, Flipper will not work and
   # you should disable these next few lines.
-  use_flipper!
+  # use_flipper!({'Flipper-Folly' => '2.3.0'})
   post_install do |installer|
     flipper_post_install(installer)
   end

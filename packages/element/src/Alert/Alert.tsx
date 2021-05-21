@@ -110,6 +110,7 @@ const Alert: React.FC<IProps> = ({ value, onClose }) => {
       style={[
         StyleSheet.absoluteFillObject,
         styles.container,
+        //@ts-ignore
         {
           opacity: animation.interpolate({
             inputRange: [0, 1, 2],

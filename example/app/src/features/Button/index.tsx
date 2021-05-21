@@ -1,4 +1,4 @@
-import { Box, Text, TouchSingle } from '@rn-base/element'
+import { Box, Text, TouchRipple, TouchSingle } from '@rn-base/element'
 import React from 'react'
 import { TouchableOpacityProps, View } from 'react-native'
 
@@ -36,6 +36,9 @@ const ButtonScreen: React.FC<IProps> = () => {
         }}>
         <Text size={12}>Button</Text>
       </View>
+      <TouchRipple>
+        <Box height={100} width={200} color="red" />
+      </TouchRipple>
     </Box>
   )
 }

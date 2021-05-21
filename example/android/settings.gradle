@@ -5,3 +5,5 @@ include ':app'
 include ':dvh-module-splash'
 project(':dvh-module-splash').projectDir = new File(rootProject.projectDir, '../../packages/splash/android')
 
+include ':dvh-module-input-filter'
+project(':dvh-module-input-filter').projectDir = new File(rootProject.projectDir, '../../packages/input-filter/android')

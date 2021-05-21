@@ -44,7 +44,8 @@
         "@rn-base/core",
         "@rn-base/splash",
         "@rn-base/native",
-        "@rn-base/element"
+        "@rn-base/element",
+        "@rn-base/input-filter"
       ]
   }
 }
