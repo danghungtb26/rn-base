@@ -30,6 +30,10 @@
     "ios",
     "android"
   ],
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": "https://github.com/danghungtb26/rn-base-input-filter",
   "author": "danghung <danghungtb26@gmail.com> (https://github.com/danghungtb26)",
   "license": "MIT",
@@ -84,5 +88,5 @@
       ]
     ]
   },
-  "gitHead": "39b0b114bd4579158a29d85bb6c25c2136ffd8c9"
+  "gitHead": "4ebd0955687ef1b173bd681f3d0b8cda1b5adb23"
 }
