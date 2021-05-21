@@ -1,6 +1,6 @@
 {
   "name": "@rn-base/native",
-  "version": "0.1.6",
+  "version": "0.1.3",
   "description": "native commons",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -78,5 +78,5 @@
       ]
     ]
   },
-  "gitHead": "4ebd0955687ef1b173bd681f3d0b8cda1b5adb23"
+  "gitHead": "91230f9a6f93dd9154d4fb46ebc2e6b38d719e87"
 }
