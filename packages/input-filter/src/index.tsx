@@ -5,7 +5,7 @@ type InputRef = TextInput
 
 const { RNCustomInput } = NativeModules
 
-type constant_type = {
+export type constant_type = {
   regex: 'string'
   character: 'string'
 }
@@ -18,14 +18,14 @@ export const InputFilterConstants: Entries<constant_type> = RNCustomInput.getCon
 
 const { setCustom } = RNCustomInput
 
-interface Filter {
+export interface Filter {
   text: string
   type: keyof constant_type
   // only ios and type == character
   inverted?: boolean
 }
 
-interface InputFilterProps extends TextInputProps {
+export interface InputFilterProps extends TextInputProps {
   filters?: Filter[]
 }
 
@@ -83,7 +83,10 @@ const InputFilter = React.forwardRef<InputRef, InputFilterProps>((props, forward
         filter: filters,
       })
     }
-  }, [filters])
+
+    // not update,
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   return <TextInput ref={ref} {...props} />
 })
