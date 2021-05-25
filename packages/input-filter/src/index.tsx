@@ -37,13 +37,41 @@ const InputFilter = React.forwardRef<InputRef, InputFilterProps>((props, forward
 
   // @ts-ignore
   useImperativeHandle(forwardRef, () => ({
-    focus: ref.current?.focus ?? (() => {}),
-    blur: ref.current?.blur ?? (() => {}),
-    clear: ref.current?.blur ?? (() => {}),
-    forceUpdate: ref.current?.forceUpdate ?? (() => {}),
-    measure: ref.current?.measure ?? (() => {}),
-    measureInWindow: ref.current?.measureInWindow ?? (() => {}),
-    measureLayout: ref.current?.measureLayout ?? (() => {}),
+    focus: () => {
+      if (typeof ref.current?.focus === 'function') {
+        ref.current.focus()
+      }
+    },
+    blur: () => {
+      if (typeof ref.current?.blur === 'function') {
+        ref.current.blur()
+      }
+    },
+    clear: () => {
+      if (typeof ref.current?.clear === 'function') {
+        ref.current.clear()
+      }
+    },
+    forceUpdate: () => {
+      if (typeof ref.current?.forceUpdate === 'function') {
+        ref.current.forceUpdate()
+      }
+    },
+    measure: (...arg) => {
+      if (typeof ref.current?.measure === 'function') {
+        ref.current.measure(...arg)
+      }
+    },
+    measureInWindow: (...arg) => {
+      if (typeof ref.current?.measureInWindow === 'function') {
+        ref.current.measureInWindow(...arg)
+      }
+    },
+    measureLayout: (...arg) => {
+      if (typeof ref.current?.measureLayout === 'function') {
+        ref.current.measureLayout(...arg)
+      }
+    },
   }))
 
   useEffect(() => {
