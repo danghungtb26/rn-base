@@ -72,6 +72,11 @@ const InputFilter = React.forwardRef<InputRef, InputFilterProps>((props, forward
         ref.current.measureLayout(...arg)
       }
     },
+    setNativeProps: (...arg) => {
+      if (typeof ref.current?.setNativeProps === 'function') {
+        ref.current.setNativeProps(...arg)
+      }
+    },
   }))
 
   useEffect(() => {
