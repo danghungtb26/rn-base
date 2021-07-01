@@ -33,13 +33,18 @@ export interface IResponseApi<T> {
  * @param timeout
  * @param languageDefault
  */
-export const createRequest = (baseUrl: string, timeout: number, languageDefault: string) => {
+export const createRequest = (
+  baseUrl: string,
+  timeout: number,
+  languageDefault: string,
+  options?: AxiosRequestConfig
+) => {
   return (
     authenToken?: string | undefined,
     cancelToken?: CancelTokenSource | undefined,
     language?: string
   ) => {
-    const defaultOptions: AxiosRequestConfig = {
+    const defaultOptions: AxiosRequestConfig = options ?? {
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
