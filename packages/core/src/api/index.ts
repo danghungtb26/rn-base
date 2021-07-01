@@ -44,7 +44,7 @@ export const createRequest = (
     cancelToken?: CancelTokenSource | undefined,
     language?: string
   ) => {
-    const defaultOptions: AxiosRequestConfig = options ?? {
+    const defaultOptions: AxiosRequestConfig = {
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
@@ -54,6 +54,7 @@ export const createRequest = (
       baseURL: baseUrl,
       timeout,
       cancelToken: cancelToken ? cancelToken.token : source.token,
+      ...(options ?? {}),
     }
 
     return {
