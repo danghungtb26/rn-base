@@ -1,6 +1,6 @@
 {
   "name": "@rn-base/core",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "core",
   "main": "index.js",
   "types": "index.d.ts",
