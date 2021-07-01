@@ -45,16 +45,17 @@ export const createRequest = (
     language?: string
   ) => {
     const defaultOptions: AxiosRequestConfig = {
+      baseURL: baseUrl,
+      timeout,
+      cancelToken: cancelToken ? cancelToken.token : source.token,
+      ...(options ?? {}),
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
         Authorization: authenToken ? `${authenToken}` : '',
         'Accept-Language': language || languageDefault,
+        ...(options?.headers ?? {}),
       },
-      baseURL: baseUrl,
-      timeout,
-      cancelToken: cancelToken ? cancelToken.token : source.token,
-      ...(options ?? {}),
     }
 
     return {
