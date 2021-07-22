@@ -60,7 +60,7 @@ android/keystores/debug.keystore
 lib/
 yarn.lock
 lerna-debug.log
-*/*/**[!src]**/*
+*/*/**[!src|android|ios]**/*
 */*/*.ts
 */*/*.d.ts
 */*/*.js.map
