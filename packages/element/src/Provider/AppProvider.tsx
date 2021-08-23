@@ -103,9 +103,15 @@ export const AppProvider: React.FC<{
   }
 
   useEffect(() => {
-    Appearance.addChangeListener(changeColor)
+    const listener = Appearance.addChangeListener(changeColor)
 
     return () => {
+      // @ts-ignore
+      if (typeof listener?.remove === 'function') {
+        // @ts-ignore
+        listener.remove()
+        return
+      }
       Appearance.removeChangeListener(changeColor)
     }
   })

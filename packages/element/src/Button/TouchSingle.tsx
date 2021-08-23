@@ -1,6 +1,7 @@
 import React, { useRef } from 'react'
 import { GestureResponderEvent, PressableProps, Pressable } from 'react-native'
 import type { RefView } from '../types'
+import { equal } from '../Utils'
 
 export interface TouchSingleProps extends PressableProps {
   renderTouchComponent?: (props: any) => React.ReactElement<any>
@@ -10,7 +11,7 @@ export interface TouchSingleProps extends PressableProps {
 /**
  * component touch 1 lan (Chặn việc click liên tục)
  */
-const TouchSingle = React.forwardRef<RefView, TouchSingleProps>(
+const TouchSingleBase = React.forwardRef<RefView, TouchSingleProps>(
   (
     {
       renderTouchComponent = (props: PressableProps) => <Pressable {...props} />,
@@ -42,5 +43,7 @@ const TouchSingle = React.forwardRef<RefView, TouchSingleProps>(
     )
   }
 )
+
+const TouchSingle = React.memo(TouchSingleBase, equal)
 
 export default TouchSingle

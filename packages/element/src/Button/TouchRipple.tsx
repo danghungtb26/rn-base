@@ -9,6 +9,7 @@ import {
   StyleSheet,
 } from 'react-native'
 import Animated, { EasingNode } from 'react-native-reanimated'
+import { equal } from '../Utils'
 
 const { timing } = Animated
 
@@ -103,7 +104,7 @@ const RippleComponent: React.FC<RippleProps> = ({
   return <Animated.View pointerEvents="box-only" key={unique} style={[styles.ripple, style]} />
 }
 
-const TouchRipple = React.forwardRef<RefView, TouchRippleProps>(
+const TouchRippleBase = React.forwardRef<RefView, TouchRippleProps>(
   (
     {
       renderTouchComponent = (props: PressableProps) => <Pressable {...props} />,
@@ -219,5 +220,7 @@ const TouchRipple = React.forwardRef<RefView, TouchRippleProps>(
     )
   }
 )
+
+const TouchRipple = React.memo(TouchRippleBase, equal)
 
 export default TouchRipple

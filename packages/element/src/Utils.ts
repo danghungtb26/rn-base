@@ -10,6 +10,8 @@ import type {
   TextBaseProps,
 } from './types'
 
+import isEqual from 'lodash.isequal'
+
 export const getRadius: (radius?: number | number[]) => ViewStyle = radius => {
   if (typeof radius === 'number') {
     return { borderRadius: radius }
@@ -513,3 +515,4 @@ export const usePropsForText: (props: TextBaseProps) => TextProps = props => {
     ...restProps,
   }
 }
+export const equal = (p: any, n: any) => isEqual(p, n)
