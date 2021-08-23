@@ -1,6 +1,6 @@
 {
   "name": "@rn-base/native",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "description": "native commons",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
