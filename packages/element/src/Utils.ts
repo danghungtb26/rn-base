@@ -1,16 +1,22 @@
+import isEqual from 'lodash.isequal'
 import { StyleProp, StyleSheet, TextProps, TextStyle, ViewProps, ViewStyle } from 'react-native'
-import removeUndifined from '@rn-base/core/removeUndifined'
 import type {
-  BoxProps,
-  ShadowProps,
-  MarginProps,
-  PaddingProps,
-  NumberOrString,
   BorderProps,
+  BoxProps,
+  MarginProps,
+  NumberOrString,
+  PaddingProps,
+  ShadowProps,
   TextBaseProps,
 } from './types'
 
-import isEqual from 'lodash.isequal'
+const removeUndefined: <T extends Record<string, any>>(value: T) => T = value => {
+  // eslint-disable-next-line @typescript-eslint/no-dynamic-delete
+  Object.keys(value).forEach(key => (value[key] === undefined ? delete value[key] : {}))
+  return value
+}
+
+export default removeUndefined
 
 export const getRadius: (radius?: number | number[]) => ViewStyle = radius => {
   if (typeof radius === 'number') {
@@ -91,7 +97,7 @@ export const getMargin: (p: MarginProps) => ViewStyle = props => {
   const { margin, ...rest } = props
   return {
     ...getValue(margin, 'margin'),
-    ...removeUndifined<Omit<MarginProps, 'margin'>>(rest),
+    ...removeUndefined<Omit<MarginProps, 'margin'>>(rest),
   }
 }
 
@@ -99,7 +105,7 @@ export const getPadding: (p: PaddingProps) => ViewStyle = props => {
   const { padding, ...rest } = props
   return {
     ...getValue(padding, 'padding'),
-    ...removeUndifined<Omit<PaddingProps, 'padding'>>(rest),
+    ...removeUndefined<Omit<PaddingProps, 'padding'>>(rest),
   }
 }
 
@@ -147,7 +153,7 @@ export const getBorder: (p: Omit<BorderProps, 'radius'>) => ViewStyle = props =>
     ...getValueBorder(border, 'Width'),
     ...getValueBorder(borderWidth, 'Width'),
     ...getValueBorder(borderColor, 'Color'),
-    ...removeUndifined<typeof rest>(rest),
+    ...removeUndefined<typeof rest>(rest),
   }
 }
 
@@ -262,7 +268,7 @@ export const usePropsForView: (props: BoxProps) => ViewProps = props => {
     typeof zIndex === 'number' ? { zIndex } : null,
     { display: display ?? 'flex' },
     hidden && { display: 'none' },
-    removeUndifined({ position, top, right, left, bottom, opacity }),
+    removeUndefined({ position, top, right, left, bottom, opacity }),
     // @ts-ignore
     style,
   ]
@@ -450,7 +456,7 @@ export const usePropsForText: (props: TextBaseProps) => TextProps = props => {
     ...restProps
   } = props
   const custom_style: StyleProp<TextStyle> = [
-    removeUndifined({
+    removeUndefined({
       opacity,
       textDecorationColor,
       textDecorationStyle,
