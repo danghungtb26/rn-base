@@ -69,7 +69,7 @@ export const createRequest = (
         if (typeof listener === 'function') {
           listener('get', url, options)
         }
-        axios.get<T, R>(url, {
+        return axios.get<T, R>(url, {
           ...defaultOptions,
           ...options,
           headers: {
@@ -111,7 +111,7 @@ export const createRequest = (
         if (typeof listener === 'function') {
           listener('put', url, options)
         }
-        axios.put<T, R>(url, data, {
+        return axios.put<T, R>(url, data, {
           ...defaultOptions,
           ...options,
           headers: {
@@ -133,7 +133,7 @@ export const createRequest = (
         if (typeof listener === 'function') {
           listener('patch', url, options)
         }
-        axios.patch<T, R>(url, data, {
+        return axios.patch<T, R>(url, data, {
           ...defaultOptions,
           ...options,
           headers: {
@@ -151,7 +151,7 @@ export const createRequest = (
         if (typeof listener === 'function') {
           listener('delete', url, options)
         }
-        axios.delete<T, R>(url, {
+        return axios.delete<T, R>(url, {
           ...defaultOptions,
           ...options,
           headers: {
