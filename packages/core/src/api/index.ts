@@ -88,7 +88,7 @@ export const createRequest = (
         options: AxiosRequestConfig = {}
       ) => {
         if (typeof listener === 'function') {
-          listener('post', url, options)
+          listener('patch', url, data, options)
         }
         return axios.post<T, R>(url, data, {
           ...defaultOptions,
@@ -109,7 +109,7 @@ export const createRequest = (
         options: AxiosRequestConfig = {}
       ) => {
         if (typeof listener === 'function') {
-          listener('put', url, options)
+          listener('patch', url, data, options)
         }
         return axios.put<T, R>(url, data, {
           ...defaultOptions,
@@ -131,7 +131,7 @@ export const createRequest = (
         options: AxiosRequestConfig = {}
       ) => {
         if (typeof listener === 'function') {
-          listener('patch', url, options)
+          listener('patch', url, data, options)
         }
         return axios.patch<T, R>(url, data, {
           ...defaultOptions,
