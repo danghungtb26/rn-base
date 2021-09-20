@@ -1,4 +1,4 @@
-import axios, { AxiosRequestConfig, AxiosResponse, CancelTokenSource } from 'axios'
+import axios, { AxiosRequestConfig, AxiosResponse, CancelTokenSource, Method } from 'axios'
 
 export interface IParamBase {
   authen?: string
@@ -33,11 +33,13 @@ export interface IResponseApi<T> {
  * @param timeout
  * @param languageDefault
  */
+
 export const createRequest = (
   baseUrl: string,
   timeout: number,
   languageDefault: string,
-  options?: AxiosRequestConfig
+  options?: AxiosRequestConfig,
+  listener?: (method: Method, ...arg: any[]) => void
 ) => {
   return (
     authenToken?: string | undefined,
@@ -63,7 +65,10 @@ export const createRequest = (
        * func get
        * override option request
        */
-      get: <T = any, R = AxiosResponse<T>>(url: string, options: AxiosRequestConfig = {}) =>
+      get: <T = any, R = AxiosResponse<T>>(url: string, options: AxiosRequestConfig = {}) => {
+        if (typeof listener === 'function') {
+          listener('get', url, options)
+        }
         axios.get<T, R>(url, {
           ...defaultOptions,
           ...options,
@@ -71,7 +76,8 @@ export const createRequest = (
             ...defaultOptions.headers,
             ...options?.headers,
           },
-        }),
+        })
+      },
       /**
        * func post
        * override option request
@@ -81,6 +87,9 @@ export const createRequest = (
         data?: any,
         options: AxiosRequestConfig = {}
       ) => {
+        if (typeof listener === 'function') {
+          listener('post', url, options)
+        }
         return axios.post<T, R>(url, data, {
           ...defaultOptions,
           ...options,
@@ -98,7 +107,10 @@ export const createRequest = (
         url: string,
         data?: any,
         options: AxiosRequestConfig = {}
-      ) =>
+      ) => {
+        if (typeof listener === 'function') {
+          listener('put', url, options)
+        }
         axios.put<T, R>(url, data, {
           ...defaultOptions,
           ...options,
@@ -106,7 +118,8 @@ export const createRequest = (
             ...defaultOptions.headers,
             ...options?.headers,
           },
-        }),
+        })
+      },
 
       /**
        * func put
@@ -116,7 +129,10 @@ export const createRequest = (
         url: string,
         data?: any,
         options: AxiosRequestConfig = {}
-      ) =>
+      ) => {
+        if (typeof listener === 'function') {
+          listener('patch', url, options)
+        }
         axios.patch<T, R>(url, data, {
           ...defaultOptions,
           ...options,
@@ -124,13 +140,17 @@ export const createRequest = (
             ...defaultOptions.headers,
             ...options?.headers,
           },
-        }),
+        })
+      },
 
       /**
        * func delete
        * override option request
        */
-      delete: <T = any, R = AxiosResponse<T>>(url: string, options: AxiosRequestConfig = {}) =>
+      delete: <T = any, R = AxiosResponse<T>>(url: string, options: AxiosRequestConfig = {}) => {
+        if (typeof listener === 'function') {
+          listener('delete', url, options)
+        }
         axios.delete<T, R>(url, {
           ...defaultOptions,
           ...options,
@@ -138,7 +158,8 @@ export const createRequest = (
             ...defaultOptions.headers,
             ...options?.headers,
           },
-        }),
+        })
+      },
     }
   }
 }
