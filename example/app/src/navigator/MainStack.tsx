@@ -1,16 +1,16 @@
 import React from 'react'
-import { createStackNavigator } from '@react-navigation/stack'
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { RootNavigationParamList, routes } from './routes'
 import HomeScreen from '../features/Home'
 import TextScreen from '../features/Text'
 import { AlertScreen } from '../features/Alert'
 import ButtonScreen from '../features/Button'
 import InputFilter from '../features/Input/FilterInput'
-const Stack = createStackNavigator<RootNavigationParamList>()
+const Stack = createNativeStackNavigator<RootNavigationParamList>()
 
 const MainStack = () => {
   return (
-    <Stack.Navigator screenOptions={{ gestureEnabled: true, cardShadowEnabled: true }}>
+    <Stack.Navigator>
       <Stack.Screen name={routes.Home} component={HomeScreen} />
       <Stack.Screen name={routes.Text} component={TextScreen} />
       <Stack.Screen name={routes.Alert} component={AlertScreen} />

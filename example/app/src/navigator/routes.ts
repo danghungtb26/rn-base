@@ -1,5 +1,5 @@
 import type { RouteProp } from '@react-navigation/core'
-import type { StackNavigationProp } from '@react-navigation/stack'
+import type { NativeStackNavigationProp } from '@react-navigation/native-stack'
 
 export type RootNavigationParamList = {
   Home: undefined
@@ -20,21 +20,21 @@ export const routes: Record<keyof RootNavigationParamList, keyof RootNavigationP
 }
 
 export interface HomeScreenNavigationProps {
-  navigation: StackNavigationProp<RootNavigationParamList, 'Home'>
+  navigation: NativeStackNavigationProp<RootNavigationParamList, 'Home'>
   route: RouteProp<RootNavigationParamList, 'Home'>
 }
 
 export interface TextScreenNavigationProps {
-  navigation: StackNavigationProp<RootNavigationParamList, 'Text'>
+  navigation: NativeStackNavigationProp<RootNavigationParamList, 'Text'>
   route: RouteProp<RootNavigationParamList, 'Text'>
 }
 
 export interface AlertScreenNavigationProps {
-  navigation: StackNavigationProp<RootNavigationParamList, 'Alert'>
+  navigation: NativeStackNavigationProp<RootNavigationParamList, 'Alert'>
   route: RouteProp<RootNavigationParamList, 'Alert'>
 }
 
 export interface ButtonScreenNavigationProps {
-  navigation: StackNavigationProp<RootNavigationParamList, 'Button'>
+  navigation: NativeStackNavigationProp<RootNavigationParamList, 'Button'>
   route: RouteProp<RootNavigationParamList, 'Button'>
 }
