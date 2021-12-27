@@ -6,6 +6,7 @@ import TextScreen from '../features/Text'
 import { AlertScreen } from '../features/Alert'
 import ButtonScreen from '../features/Button'
 import InputFilter from '../features/Input/FilterInput'
+import NativeScreen from '../features/Native'
 const Stack = createNativeStackNavigator<RootNavigationParamList>()
 
 const MainStack = () => {
@@ -16,6 +17,7 @@ const MainStack = () => {
       <Stack.Screen name={routes.Alert} component={AlertScreen} />
       <Stack.Screen name={routes.Button} component={ButtonScreen} />
       <Stack.Screen name={routes.Input} component={InputFilter} />
+      <Stack.Screen name={routes.NativeScreen} component={NativeScreen} />
     </Stack.Navigator>
   )
 }
