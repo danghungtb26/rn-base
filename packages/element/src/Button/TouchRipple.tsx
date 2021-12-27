@@ -36,6 +36,7 @@ interface Ripple {
   progress: Animated.Value<0 | 1>
   locationX: number
   locationY: number
+  // eslint-disable-next-line react/no-unused-prop-types
   started: boolean
 }
 
