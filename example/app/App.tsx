@@ -8,6 +8,7 @@ import { enableScreens } from 'react-native-screens'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
 
 import Navigator from './src/navigator'
+// import { GestureHandlerRootView } from 'react-native-gesture-handler'
 
 enableScreens()
 
@@ -19,6 +20,7 @@ export default () => {
   const [locale, setLocale] = useState('ja')
 
   return (
+    // <GestureHandlerRootView>
     <AlertProvider>
       <AppProvider
         locale={locale}
@@ -56,5 +58,6 @@ export default () => {
         </SafeAreaProvider>
       </AppProvider>
     </AlertProvider>
+    // </GestureHandlerRootView>
   )
 }

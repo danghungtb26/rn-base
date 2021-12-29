@@ -21,7 +21,6 @@ interface Offset {
   bottom: number
   bottom_without_margin: number
 }
-
 const offset: Offset = {
   top: Platform.OS === 'android' ? StatusBar.currentHeight : NativeCommonManager?.top || defaultTop,
   top_without_margin:

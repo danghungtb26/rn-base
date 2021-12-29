@@ -19,7 +19,7 @@ import java.util.Map;
 
 @ReactModule(name = RNBaseNativeJsiModule.name)
 public class RNBaseNativeJsiModule extends ReactContextBaseJavaModule {
-  public static final String name = "RNBaseNativeJsiModule";
+  public static final String name = "NativeCommonManager";
   static {
     System.loadLibrary("cpp-rn-base-native");
   }
@@ -46,6 +46,18 @@ public class RNBaseNativeJsiModule extends ReactContextBaseJavaModule {
       Log.e("SimpleJsiModule", "JSI Runtime is not available in debug mode");
     }
 
+  }
+
+  @Override
+  public Map<String, Object> getConstants() {
+    SafeAreaInset insets = getSafeAreaInsets();
+    final Map<String, Object> constants = new HashMap<>();
+    constants.put("top", insets.safeAreaInsetsTop);
+    constants.put("bottom", insets.safeAreaInsetsBottom);
+    constants.put("left", insets.safeAreaInsetsLeft);
+    constants.put("right", insets.safeAreaInsetsRight);
+
+    return constants;
   }
 
   public SafeAreaInset getSafeAreaInsets() {

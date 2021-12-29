@@ -12,9 +12,7 @@ add_library(
         SHARED
         src/main/cpp/JSafeAreaInset.cpp
         src/main/cpp/cpp-adapter.cpp
-        src/main/cpp/JSISafeAreaInsets.cpp
-        src/main/cpp/JSIJNIConversion.cpp
-        )
+)
 
 
 target_include_directories(

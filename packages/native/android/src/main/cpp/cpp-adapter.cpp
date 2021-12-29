@@ -3,7 +3,7 @@
 #include "pthread.h"
 #include <jsi/jsi.h>
 #include <fbjni/fbjni.h>
-#include "JSIJNIConversion.h"
+#include "JSafeAreaInset.h"
 #include <react/jni/WritableNativeMap.h>
 
 
@@ -86,47 +86,6 @@ static jstring string2jstring(JNIEnv *env, const string &str) {
     return (*env).NewStringUTF(str.c_str());
 }
 
-void install(facebook::jsi::Runtime &jsiRuntime) {
-    auto getString = Function::createFromHostFunction(jsiRuntime,
-                                                      PropNameID::forAscii(jsiRuntime, "getString"),
-                                                      0,
-                                                      [](Runtime &runtime,
-                                                         const Value &thisValue,
-                                                         const Value *args,
-                                                         size_t count) -> Value {
-
-                                                          string helloworld = "helloworld";
-                                                          return Value(runtime,
-                                                                       String::createFromUtf8(
-                                                                               runtime,
-                                                                               helloworld));
-                                                      });
-
-    jsiRuntime.global().setProperty(jsiRuntime, "getString", move(getString));
-
-//    auto getSafeAreaInsets = Function::createFromHostFunction(jsiRuntime,
-//                                                              PropNameID::forAscii(jsiRuntime,
-//                                                                                   "getArea"),
-//                                                              0,
-//                                                              [](Runtime &runtime,
-//                                                                 const Value &thisValue,
-//                                                                 const Value *args,
-//                                                                 size_t count) -> Value {
-//
-//                                                                  JNIEnv *jniEnv = GetJniEnv();
-//
-//                                                                  java_class = jniEnv->GetObjectClass(java_object);
-//
-//                                                                  jmethodID getModel =
-//                                                                          jniEnv->GetMethodID(java_class, "getSafeAreaInsets",
-//                                                                                              "()Lcom/rnbasenative/SafeAreaInset;");
-//                                                                  jobject obj = jniEnv->CallObjectMethod(java_class, getModel);
-//                                                                  return Value(100);
-//                                                              });
-//    jsiRuntime.global().setProperty(jsiRuntime, "getArea", move(getSafeAreaInsets));
-}
-
-
 extern "C"
 JNIEXPORT void JNICALL
 Java_com_rnbasenative_RNBaseNativeJsiModule_nativeInstall(JNIEnv *env, jobject thiz, jlong jsi) {
@@ -134,11 +93,10 @@ Java_com_rnbasenative_RNBaseNativeJsiModule_nativeInstall(JNIEnv *env, jobject t
     auto runtime = reinterpret_cast<facebook::jsi::Runtime *>(jsi);
 
     if (runtime) {
-        install(*runtime);
-        facebook::jsi::Runtime &a = *runtime;
-        auto getAAA = Function::createFromHostFunction(a,
-                                                                  PropNameID::forAscii(a,
-                                                                                       "getArea2"),
+        facebook::jsi::Runtime &jsiRunTime = *runtime;
+        auto getSafeAreaInset = Function::createFromHostFunction(jsiRunTime,
+                                                                  PropNameID::forAscii(jsiRunTime,
+                                                                                       "getSafeAreaInset"),
                                                                   0,
                                                                   [](Runtime &runtime,
                                                                      const Value &thisValue,
@@ -154,11 +112,24 @@ Java_com_rnbasenative_RNBaseNativeJsiModule_nativeInstall(JNIEnv *env, jobject t
                                                                                                   "()Lcom/rnbasenative/SafeAreaInset;");
                                                                       jobject object = jniEnv->CallObjectMethod(java_object, getModel);
                                                                       auto globalContacts = facebook::jni::make_global(object);
-                                                                      auto local = facebook::jni::make_local(globalContacts);
-                                                                      return JSIJNIConversion::convertJNIObjectToJSIValue(runtime, local);
-//return Value(100);
+//                                                                      auto local = facebook::jni::make_local(globalContacts);
+
+                                                                      auto inset = facebook::jni::static_ref_cast<ghost::JSafeAreaInset>(globalContacts);
+
+                                                                      jsi::Object result(runtime);
+                                                                      result.setProperty(runtime, "top", inset->getSafeAreaInsetsTop());
+                                                                      result.setProperty(runtime, "bottom", inset->getSafeAreaInsetsBottom());
+                                                                      result.setProperty(runtime, "right", inset->getSafeAreaInsetsRight());
+                                                                      result.setProperty(runtime, "left", inset->getSafeAreaInsetsLeft());
+
+                                                                      return result;
+
                                                                   });
-        a.global().setProperty(a, "getArea2", move(getAAA));
+
+        jsi::Object result(jsiRunTime);
+        result.setProperty(jsiRunTime, "getSafeAreaInset", getSafeAreaInset);
+
+        jsiRunTime.global().setProperty(jsiRunTime, "rnBaseNativeCommons", move(result));
 
     }
 
