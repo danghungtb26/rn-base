@@ -1,7 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 const escape = require('escape-string-regexp');
-const blacklist = require('metro-config/src/defaults/blacklist');
+const blacklist = require('metro-config/src/defaults/exclusionList');
 
 const root = path.resolve(__dirname, '..');
 const packages = path.resolve(root, 'packages');
