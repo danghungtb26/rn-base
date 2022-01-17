@@ -11,14 +11,17 @@ const InputFilters: React.FC<{}> = () => {
     <Box flex={1} center middle>
       <InputFilter
         filters={[
-          { text: 'abcbcc', type: InputFilterConstants.character },
           {
             text: '[^0-9]',
             type: InputFilterConstants.regex,
           },
         ]}
         style={{ width: 100, backgroundColor: 'red' }}
-        onChangeText={value => setText(value)}
+        onChangeText={value => {
+          console.log('🚀 ~ file: FilterInput.tsx ~ line 24 ~ value', value)
+
+          setText(value)
+        }}
         maxLength={10}
       />
 
