@@ -5,7 +5,8 @@
   "workspaces": {
     "packages": [
       "packages/*",
-      "example"
+      "example",
+      "Example68"
     ]
   },
   "description": "a",
@@ -39,21 +40,33 @@
   "homepage": "https://github.com/danghungtb26/react-native-dvh-module#readme",
   "devDependencies": {
     "@commitlint/config-conventional": "16.2.4",
-    "axios": "0.27.2",
+    "@react-native-community/eslint-config": "^3.0.1",
+    "@react-native-community/eslint-plugin": "^1.1.0",
+    "@types/lodash": "^4.14.182",
+    "@types/lodash.isequal": "^4.5.6",
+    "@types/react": "^17.0.41",
+    "@types/react-native": "^0.67.3",
+    "@typescript-eslint/eslint-plugin": "^5.16.0",
+    "@typescript-eslint/parser": "^5.16.0",
     "commitlint": "16.3.0",
     "eslint": "8.15.0",
-    "eslint-config-satya164": "3.1.10",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "17.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-eslint-plugin": "^4.1.0",
+    "eslint-plugin-import": "2.25.2",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "eslint-plugin-react-native": "^4.0.0",
     "husky": "8.0.1",
     "jest": "^26.0.1",
     "lerna": "4.0.0",
     "lint-staged": "^12.4.1",
-    "lodash": "^4.17.21",
     "prettier": "2.6.2",
     "typescript": "4.6.4"
-  },
-  "resolutions": {
-    "react": "*",
-    "react-native": "*"
   },
   "jest": {
     "preset": "react-native",

@@ -32,13 +32,10 @@ export const AreaInput = React.memo(
 
     const p = usePropsForText(props)
 
-    // lấy ra toàn bộ object liên quan đến
     const paddingObject = StyleSheet.flatten(p.style)
-    const getsize = paddingObject.lineHeight || (size || 14) * 1.2
-    // giá trị default dựa vào padding hoặc là paddingvertical
+    const getSize = paddingObject.lineHeight || (size || 14) * 1.2
     let cal: number = Number(paddingObject.paddingVertical || paddingObject.padding || 0) * 2
 
-    // nếu có paddingTop sẽ bỏ đi 1phần padding và + với padding top
     if (typeof paddingObject.paddingTop === 'number') {
       cal =
         cal -
@@ -46,7 +43,6 @@ export const AreaInput = React.memo(
         paddingObject.paddingTop
     }
 
-    // nếu có paddingbottom sẽ bỏ đi 1 phần padding và + padding bôttm
     if (typeof paddingObject.paddingBottom === 'number') {
       cal =
         cal -
@@ -54,7 +50,7 @@ export const AreaInput = React.memo(
         paddingObject.paddingBottom
     }
 
-    const height = getsize * rows + cal
+    const height = getSize * rows + cal
 
     return <Input textAlign={textAlign} ref={ref} multiline height={height} size={size} {...p} />
   }),

@@ -1,16 +1,12 @@
 import React from 'react'
 import { View } from 'react-native'
 import type { BoxProps, RefView } from '../types'
-import { equal, usePropsForView } from '../Utils'
-
-/**
- * component thay thế component View của react-native
- */
+import { equal, useViewProps } from '../Utils'
 
 export const Box = React.memo(
   React.forwardRef<RefView, BoxProps>((props, ref) => {
     const { children, ...restProps } = props
-    const p = usePropsForView(restProps)
+    const p = useViewProps(restProps)
     return (
       <View ref={ref} {...p}>
         {children}

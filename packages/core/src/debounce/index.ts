@@ -1,5 +1,5 @@
 /**
- * func debounce ap dung thay cho lodash
+ *
  * hook
  * @param func
  * @param wait

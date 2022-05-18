@@ -9,7 +9,6 @@ export interface TouchSingleProps extends PressableProps {
 }
 
 /**
- * component touch 1 lan (Chặn việc click liên tục)
  */
 const TouchSingleBase = React.forwardRef<RefView, TouchSingleProps>(
   (

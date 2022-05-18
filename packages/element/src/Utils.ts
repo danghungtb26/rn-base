@@ -1,4 +1,6 @@
+/* eslint-disable prefer-destructuring */
 import isEqual from 'lodash.isequal'
+import { useMemo } from 'react'
 import { StyleProp, StyleSheet, TextProps, TextStyle, ViewProps, ViewStyle } from 'react-native'
 import type {
   BorderProps,
@@ -60,7 +62,7 @@ export const getShadow: (shadow?: number | ShadowProps) => ViewStyle = shadow =>
 export const getValue: (
   value?: NumberOrString | NumberOrString[],
   type?: 'margin' | 'padding'
-) => Record<string, any> = (value, type = 'margin') => {
+) => ViewStyle = (value, type = 'margin') => {
   if (typeof value === 'number') {
     return {
       [type]: value,
@@ -68,7 +70,7 @@ export const getValue: (
   }
 
   if (Array.isArray(value)) {
-    const state: Record<string, any> = {}
+    const state: ViewStyle = {}
 
     if (value.length <= 1 && value.length > 0) {
       state[`${type}`] = value[0]
@@ -157,7 +159,7 @@ export const getBorder: (p: Omit<BorderProps, 'radius'>) => ViewStyle = props =>
   }
 }
 
-export const usePropsForView: (props: BoxProps) => ViewProps = props => {
+export const useViewProps: (props: BoxProps) => ViewProps = props => {
   const {
     center,
     middle,
@@ -214,6 +216,14 @@ export const usePropsForView: (props: BoxProps) => ViewProps = props => {
     ...restProps
   } = props
 
+  const makeStyles = useMemo(() => {
+    const s = []
+    console.log(Object.prototype.hasOwnProperty.call(props, 'height'))
+    delete props.color
+    // if(Object(props).prototype.hasOwnProperty(''))
+  }, [props])
+  console.log('🚀 ~ file: Utils.ts ~ line 225 ~ props', props)
+
   const style_custom: StyleProp<ViewStyle> = [
     justifyContent ? { justifyContent } : null,
     alignItems ? { alignItems } : null,
@@ -221,12 +231,11 @@ export const usePropsForView: (props: BoxProps) => ViewProps = props => {
     center && styles.center,
     middle && styles.middle,
     row && styles.row,
-    !!color && { backgroundColor: color },
+    !!props.color && { backgroundColor: color },
     (typeof width === 'number' || typeof width === 'string') && { width },
     (typeof height === 'number' || typeof height === 'string') && { height },
     getRadius(radius),
     getShadow(shadow),
-    // lấy ra margin và padding dựa vào props
     getMargin({
       margin,
       marginBottom,
@@ -245,7 +254,6 @@ export const usePropsForView: (props: BoxProps) => ViewProps = props => {
       paddingVertical,
       padding,
     }),
-    // lấy ra thông tin style border
     getBorder({
       borderStyle,
       border,
@@ -275,7 +283,7 @@ export const usePropsForView: (props: BoxProps) => ViewProps = props => {
 
   const customProps: ViewProps = {
     style: style_custom,
-    ...restProps,
+    ...props,
   }
 
   return customProps

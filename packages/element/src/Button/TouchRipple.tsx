@@ -1,5 +1,3 @@
-import type { RefView } from '../types'
-import { Box } from '../Box'
 import React, { useEffect, useRef, useState } from 'react'
 import {
   GestureResponderEvent,
@@ -9,6 +7,8 @@ import {
   StyleSheet,
 } from 'react-native'
 import Animated, { EasingNode } from 'react-native-reanimated'
+import { Box } from '../Box'
+import type { RefView } from '../types'
 import { equal } from '../Utils'
 
 const { timing } = Animated
@@ -168,14 +168,12 @@ const TouchRippleBase = React.forwardRef<RefView, TouchRippleProps>(
       const ripple = ripples[ripples.length - 1]
       if (ripple && !ripple.started) {
         let checkFinished = false
-        // biến này để xác định xem ripple đã được start hay chưa nếu đã start rồi thì bỏ qua hết
         ripple.started = true
         timing(ripple.progress, {
           toValue: 1,
           duration,
           easing: EasingNode.in(EasingNode.ease),
         }).start(() => {
-          // do tại đây bị gọi 2 lần, nên cần đặt biến chặn ko cho gọi nữa
           if (!checkFinished) {
             checkFinished = true
             setRipples(s => s.filter(i => i.unique !== s[0]?.unique))
@@ -195,7 +193,8 @@ const TouchRippleBase = React.forwardRef<RefView, TouchRippleProps>(
             top={0}
             left={0}
             right={0}
-            bottom={0}>
+            bottom={0}
+          >
             {ripples.map(item => (
               <RippleComponent key={item.unique} {...item} color={color} />
             ))}

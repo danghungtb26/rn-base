@@ -1,10 +1,4 @@
 /**
- *  func xoá toàn bộ ký tự dấu trong tiếng việt
- *
- * @example
- * ```
- *   const newString = removeVietnamese('Tiêngs việt')
- * ```
  * @param value
  */
 const removeVietnamese = (value: string) => {

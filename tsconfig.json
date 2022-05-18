@@ -28,5 +28,6 @@
     "declaration": true,
     "sourceMap": true
   },
-  "exclude": ["__tests__", "lib"]
+  "exclude": ["__tests__", "lib", "babel.config.js"],
+  "include": ["*.json"]
 }

@@ -27,12 +27,12 @@ const offset: Offset = {
   top_without_margin:
     Platform.OS === 'android'
       ? StatusBar.currentHeight ?? defaultTopWithoutMarin
-      : NativeCommonManager?.top - (isIphoneX() ? 12 : 0) || defaultTopWithoutMarin,
+      : (NativeCommonManager?.top ?? 0) - (isIphoneX() ? 12 : 0) || defaultTopWithoutMarin,
   bottom: NativeCommonManager?.bottom || defaultBottom,
   bottom_without_margin:
     Platform.OS === 'android'
       ? 0
-      : NativeCommonManager?.bottom - (isIphoneX() ? 10 : 0) ?? defaultBottomWithoutMargin,
+      : (NativeCommonManager?.bottom ?? 0) - (isIphoneX() ? 10 : 0) ?? defaultBottomWithoutMargin,
 }
 
 // func lấy ra khoảng cách safe area view

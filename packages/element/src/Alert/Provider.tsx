@@ -1,5 +1,5 @@
-import { Box } from '../Box'
 import React, { useState } from 'react'
+import { Box } from '../Box'
 
 import Alert from './Alert'
 import type { AlertAction, AlertContent } from './types'

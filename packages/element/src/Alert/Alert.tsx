@@ -79,7 +79,7 @@ const Alert: React.FC<IProps> = ({ value, onClose }) => {
       )
     }
 
-    if (actions.length === 2 && actions[0].text.length < 13 && actions[1].text.length < 13)
+    if (actions.length === 2 && actions[0].text.length < 13 && actions[1].text.length < 13) {
       return (
         <View style={[styles.viewActions, styles.twoAction]}>
           <TouchableOpacity style={[styles.action, styles.two]} onPress={close(actions[0].onPress)}>
@@ -91,13 +91,15 @@ const Alert: React.FC<IProps> = ({ value, onClose }) => {
           </TouchableOpacity>
         </View>
       )
+    }
     return (
       <>
         {actions.map((item, index) => (
           <TouchableOpacity
             key={`${item.text}-${index}`}
             style={styles.action}
-            onPress={close(actions[index].onPress)}>
+            onPress={close(actions[index].onPress)}
+          >
             {renderButtonAction(actions[index].text)}
           </TouchableOpacity>
         ))}
@@ -110,7 +112,7 @@ const Alert: React.FC<IProps> = ({ value, onClose }) => {
       style={[
         StyleSheet.absoluteFillObject,
         styles.container,
-        //@ts-ignore
+        // @ts-ignore
         {
           opacity: animation.interpolate({
             inputRange: [0, 1, 2],
@@ -118,12 +120,14 @@ const Alert: React.FC<IProps> = ({ value, onClose }) => {
             extrapolate: Extrapolate.CLAMP,
           }),
         },
-      ]}>
+      ]}
+    >
       {cancelable ? (
         <TouchableOpacity
           activeOpacity={0}
           style={[StyleSheet.absoluteFillObject]}
-          onPress={close()}>
+          onPress={close()}
+        >
           <View />
         </TouchableOpacity>
       ) : null}
@@ -141,7 +145,8 @@ const Alert: React.FC<IProps> = ({ value, onClose }) => {
               },
             ],
           },
-        ]}>
+        ]}
+      >
         <View style={styles.viewLabel}>
           <Text size={18} color="#000" weight="500">
             {title}
