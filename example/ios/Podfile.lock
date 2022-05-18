@@ -639,6 +639,7 @@ SPEC CHECKSUMS:
   React-runtimeexecutor: dec32ee6f2e2a26e13e58152271535fadff5455a
   ReactCommon: 57b69f6383eafcbd7da625bfa6003810332313c4
   rn-base-input-filter: 8b5fc9a8fc93bd470912a3471197cd2b34692999
+  rn-base-native: 1c4d667d6e1ac3d6906bcdbd86ceaba2d547a37c
   rn-base-native: 031bcadfbbffd6b1924410d55c2d340cfdba18cb
   RNCMaskedView: 0e1bc4bfa8365eba5fbbb71e07fbdc0555249489
   RNFastImage: 1f2cab428712a4baaf78d6169eaec7f622556dd7

@@ -8,8 +8,10 @@ import com.facebook.react.ReactApplication;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.ReactInstanceManager;
+import com.facebook.react.bridge.JSIModulePackage;
 import com.facebook.soloader.SoLoader;
 import com.rnbaseinputfilter.InputFilterPackage;
+import com.rnbasenative.RNBaseNativePackage;
 import com.splash.SplashPackage;
 
 import java.lang.reflect.InvocationTargetException;
@@ -32,6 +34,7 @@ public class MainApplication extends Application implements ReactApplication {
           // packages.add(new MyReactNativePackage());
           packages.add(new SplashPackage());
           packages.add(new InputFilterPackage());
+          packages.add(new RNBaseNativePackage());
           return packages;
 
         }
@@ -40,6 +43,12 @@ public class MainApplication extends Application implements ReactApplication {
         protected String getJSMainModuleName() {
           return "index";
         }
+
+        @Override
+        protected JSIModulePackage getJSIModulePackage() {
+          return new JSIModule();
+        }
+
       };
 
   @Override

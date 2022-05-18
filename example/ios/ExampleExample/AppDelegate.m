@@ -49,7 +49,7 @@ static void InitializeFlipper(UIApplication *application) {
   rootViewController.view = rootView;
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
-  [Splash initWithStoryboard:@"LaunchScreen" rootView:rootView];
+//  [Splash initWithStoryboard:@"LaunchScreen" rootView:rootView];
   return YES;
 }
 

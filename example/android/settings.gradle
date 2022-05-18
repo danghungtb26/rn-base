@@ -7,3 +7,6 @@ project(':dvh-module-splash').projectDir = new File(rootProject.projectDir, '../
 
 include ':dvh-module-input-filter'
 project(':dvh-module-input-filter').projectDir = new File(rootProject.projectDir, '../../packages/input-filter/android')
+
+include ':dvh-module-native'
+project(':dvh-module-native').projectDir = new File(rootProject.projectDir, '../../packages/native/android')

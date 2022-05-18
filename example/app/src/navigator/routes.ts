@@ -9,6 +9,7 @@ export type RootNavigationParamList = {
   Alert: undefined
   Button: undefined
   Input: undefined
+  NativeScreen: undefined
 }
 
 export const routes: Record<keyof RootNavigationParamList, keyof RootNavigationParamList> = {
@@ -17,6 +18,7 @@ export const routes: Record<keyof RootNavigationParamList, keyof RootNavigationP
   Alert: 'Alert',
   Button: 'Button',
   Input: 'Input',
+  NativeScreen: 'NativeScreen',
 }
 
 export interface HomeScreenNavigationProps {
