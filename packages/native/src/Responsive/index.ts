@@ -20,7 +20,6 @@ const wscale: number = SCREEN_WIDTH / fixed_width
 const hscale: number = SCREEN_HEIGHT / fixed_height
 
 /**
- * func tinh toán lại width theo kich thước của từng device
  * @param size
  */
 
@@ -33,7 +32,6 @@ export const widthLize: (size: number, w?: number) => number = (size, w) => {
 }
 
 /**
- * func tính toán lại height theo kích thước của device
  * @param size
  */
 export const heightLize: (size: number, h?: number) => number = (size, h) => {
@@ -45,7 +43,6 @@ export const heightLize: (size: number, h?: number) => number = (size, h) => {
 }
 
 /**
- * func tinhs toan fontsize theo kích thước của device
  */
 
 export const fontSizeLine: (size: number, w?: number, h?: number) => number = (size, w, h) => {

@@ -11,10 +11,10 @@ export interface AlertContent {
   actions?: AlertButton[]
 }
 
-export type ShowAction = (value: Omit<AlertContent, 'id'>) => number
-export type HideAction = (id: number) => void
+export type ShowAlertAction = (value: Omit<AlertContent, 'id'>) => number
+export type HideAlertAction = (id: number) => void
 
 export interface AlertAction {
-  show: ShowAction
-  hide: HideAction
+  show: ShowAlertAction
+  hide: HideAlertAction
 }

@@ -1,10 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 import Splash from '@rn-base/splash'
 // import { isIphoneX } from '@rn-base/native-common'
-import { AlertProvider, AppProvider, Box, DefaultColor } from '@rn-base/element'
+import { AlertProvider, AppProvider, DefaultColor, PopupProvider } from '@rn-base/element'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
-
 import Navigator from './src/navigator'
 
 const App = () => {
@@ -27,6 +26,7 @@ const App = () => {
           <Navigator />
         </SafeAreaProvider>
       </AppProvider>
+      <PopupProvider />
     </AlertProvider>
   )
 }

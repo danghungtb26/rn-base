@@ -3,9 +3,6 @@ import { Box } from '../Box'
 import type { CircleProps, RefView } from '../types'
 import { equal } from '../Utils'
 
-/**
- * component thay thế component View của react-native
- */
 export const Circle = React.memo(
   React.forwardRef<RefView, CircleProps>((props, ref) => {
     const { size = 0, height, width, radius, children, ...restProps } = props
@@ -18,4 +15,4 @@ export const Circle = React.memo(
   equal
 )
 
-Circle.displayName = 'View'
+Circle.displayName = 'Circle'

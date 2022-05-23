@@ -4,5 +4,5 @@
   "compilerOptions": {
     "removeComments": true
   },
-  "exclude": ["example", "lib"]
+  "exclude": ["example", "lib", "src/__tests__/*"]
 }

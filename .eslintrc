@@ -61,7 +61,12 @@
     "react/no-unstable-nested-components": [
       "error",
       { "allowAsProps": true  }
-    ]
+    ],
+    "react-hooks/exhaustive-deps": ["warn", {
+      "additionalHooks": "(useMyCustomHook|useMyOtherCustomHook)"
+    }],
+    "prefer-destructuring": 0,
+    "function-paren-newline": "off"
   },
   "globals": {
     "window": true,

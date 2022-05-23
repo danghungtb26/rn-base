@@ -1,12 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react'
 import {
+  Animated,
+  Easing,
   GestureResponderEvent,
   LayoutChangeEvent,
   Pressable,
   PressableProps,
   StyleSheet,
 } from 'react-native'
-import Animated, { EasingNode } from 'react-native-reanimated'
 import { Box } from '../Box'
 import type { RefView } from '../types'
 import { equal } from '../Utils'
@@ -33,19 +34,12 @@ interface TouchRippleProps extends PressableProps {
 interface Ripple {
   unique: number
   R: number
-  progress: Animated.Value<0 | 1>
+  progress: Animated.Value
   locationX: number
   locationY: number
   // eslint-disable-next-line react/no-unused-prop-types
   started: boolean
 }
-
-/**
- * func sinh ra các ripple cho view
- * bao gồm R: Đường kình hình tròn
- * location: vị trí
- * progress: dùng để chạy animation
- */
 export const getRipple: (p: {
   dimension: { width: number; height: number }
   event: GestureResponderEvent
@@ -64,7 +58,7 @@ export const getRipple: (p: {
 
   return {
     unique: unique + 1,
-    progress: new Animated.Value<0 | 1>(0),
+    progress: new Animated.Value(0),
     R,
     locationX,
     locationY,
@@ -101,7 +95,6 @@ const RippleComponent: React.FC<RippleProps> = ({
     }),
     backgroundColor: color,
   }
-  // @ts-ignore
   return <Animated.View pointerEvents="box-only" key={unique} style={[styles.ripple, style]} />
 }
 
@@ -119,10 +112,6 @@ const TouchRippleBase = React.forwardRef<RefView, TouchRippleProps>(
     },
     ref
   ) => {
-    /**
-     *
-     * state phuc vu
-     */
     const [offset, setOffset] = useState({
       width: 0,
       height: 0,
@@ -130,28 +119,15 @@ const TouchRippleBase = React.forwardRef<RefView, TouchRippleProps>(
     const [ripples, setRipples] = useState<Ripple[]>([])
 
     const unique = useRef<number>(0)
-
-    /**
-     * onLayout lấy ra kích thước của button này
-     * phục vụ cho việc hiển thị touch
-     */
     const onLayoutTouch = (event: LayoutChangeEvent) => {
       const { layout } = event.nativeEvent
       setOffset({ width: layout.width || 0, height: layout.height || 0 })
-      if (typeof onLayout === 'function') {
-        onLayout(event)
-      }
+      onLayout?.(event)
     }
 
-    /**
-     * 2 func press khi click vao
-     * dung de add them ripple vao view
-     */
     const press = (event: GestureResponderEvent) => {
       startRipple(event)
-      if (typeof onPressIn === 'function') {
-        onPressIn(event)
-      }
+      onPressIn?.(event)
     }
 
     // const longPress = (event: GestureResponderEvent) => {
@@ -172,7 +148,8 @@ const TouchRippleBase = React.forwardRef<RefView, TouchRippleProps>(
         timing(ripple.progress, {
           toValue: 1,
           duration,
-          easing: EasingNode.in(EasingNode.ease),
+          easing: Easing.in(Easing.ease),
+          useNativeDriver: true,
         }).start(() => {
           if (!checkFinished) {
             checkFinished = true

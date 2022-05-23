@@ -70,56 +70,21 @@ export interface BoxProps extends ViewProps, BorderProps, PaddingProps, MarginPr
 
   hidden?: boolean
 
-  children?: React.ReactNode
-  /**
-   * làm cho children nằm giữa view
-   * row == false => theo chiều ngang
-   * row == true => theo chiều dọc
-   */
+  // children?: React.ReactNode
+
   center?: Boolean
-  /**
-   * đặt view theo chiều ngang
-   */
+
   row?: Boolean
-  /**
-   * làm cho children nằm giữa view
-   * row == true => theo chiều ngang
-   * row == false => theo chiều dọc
-   */
+
   middle?: Boolean
-  /**
-   * đặt background cho view
-   * nếu đặt shadow thì phải đặt color
-   */
+
   color?: string
-  /**
-   * đặt width cho view
-   */
+
   width?: NumberOrString
-  /**
-   * đặt height cho view
-   */
+
   height?: NumberOrString
-  /**
-   * đặt borderradius cho view
-   * nếu radius not define => đặt cả 4 góc của view
-   */
 
-  /**
-   * đặt flex cho view (viewstyle)
-   */
   flex?: number
-  /**
-   * đặt shadow cho view
-   * @android : elevation
-   * @ios : shadow (xem getShadow)
-   */
-
-  /**
-   * có sửa dụng animation hay không
-   */
-  animted?: 'reanimated' | 'animated' | 'none'
-
   justifyContent?:
     | 'flex-start'
     | 'flex-end'
@@ -137,10 +102,6 @@ export interface BoxProps extends ViewProps, BorderProps, PaddingProps, MarginPr
   wrap?: 'wrap' | 'nowrap' | 'wrap-reverse'
   basis?: number | string
   alignItems?: 'flex-start' | 'flex-end' | 'center' | 'stretch' | 'baseline'
-
-  /**
-   * thuoc tinh zindex cua style
-   */
   position?: 'absolute' | 'relative'
   right?: number | string
   left?: NumberOrString
@@ -193,16 +154,7 @@ export interface TextBaseProps extends Omit<BoxProps, 'style' | 'children' | 'sh
 export interface ITextInputBaseProps
   extends TextInputProps,
     Omit<TextBaseProps, 'children' | 'style' | 'textAlign'> {
-  /**
-   * backgroundColor cho input
-   *
-   */
-
-  /**
-   * text hien thi
-   * Override
-   */
-  children?: any
+  children?: React.ReactNode
 
   rows?: number
 }

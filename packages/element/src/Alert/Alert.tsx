@@ -1,47 +1,39 @@
 /* eslint-disable react/no-array-index-key */
-import React, { useCallback, useEffect } from 'react'
-import { TouchableOpacity, StyleSheet, View } from 'react-native'
-import Animated from 'react-native-reanimated'
+import React, { useCallback, useEffect, useRef } from 'react'
+import { TouchableOpacity, StyleSheet, View, Animated } from 'react-native'
 import { Text } from '../Text'
 import type { AlertContent } from './types'
 
-const { spring, useValue, Extrapolate } = Animated
+const { spring, Value } = Animated
 
 interface IProps {
   value: AlertContent
   onClose?: (id: number) => void
 }
 
+const springConfig: Omit<Animated.SpringAnimationConfig, 'toValue'> = {
+  damping: 4,
+  mass: 0.1,
+  stiffness: 65,
+
+  overshootClamping: true,
+  restSpeedThreshold: 0.1,
+  restDisplacementThreshold: 0.1,
+  useNativeDriver: true,
+}
+
 const Alert: React.FC<IProps> = ({ value, onClose }) => {
   const { id, title, content, cancelable, actions } = value
-  const animation = useValue<number>(0)
+  const animation = useRef<Animated.Value>(new Value(0))
 
   const open = useCallback(() => {
-    animation.setValue(0)
-    spring(animation, {
-      toValue: 1,
-      damping: 4,
-      mass: 0.1,
-      stiffness: 65,
-
-      overshootClamping: 1,
-      restSpeedThreshold: 0.1,
-      restDisplacementThreshold: 0.1,
-    }).start()
+    animation.current.setValue(0)
+    spring(animation.current, { ...springConfig, toValue: 1 }).start()
   }, [animation])
 
   const close = (callback?: () => void) => () => {
     let finished = false
-    spring(animation, {
-      toValue: 2,
-      damping: 4,
-      mass: 0.1,
-      stiffness: 60,
-
-      overshootClamping: 1,
-      restSpeedThreshold: 0.9,
-      restDisplacementThreshold: 0.9,
-    }).start(() => {
+    spring(animation.current, { ...springConfig, toValue: 2 }).start(() => {
       if (!finished) {
         finished = true
         if (typeof onClose === 'function') onClose(id)
@@ -112,12 +104,11 @@ const Alert: React.FC<IProps> = ({ value, onClose }) => {
       style={[
         StyleSheet.absoluteFillObject,
         styles.container,
-        // @ts-ignore
         {
-          opacity: animation.interpolate({
+          opacity: animation.current.interpolate({
             inputRange: [0, 1, 2],
             outputRange: [0, 1, 0.05],
-            extrapolate: Extrapolate.CLAMP,
+            extrapolate: 'clamp',
           }),
         },
       ]}
@@ -137,10 +128,10 @@ const Alert: React.FC<IProps> = ({ value, onClose }) => {
           {
             transform: [
               {
-                scale: animation.interpolate({
+                scale: animation.current.interpolate({
                   inputRange: [0, 1, 2],
                   outputRange: [1.15, 1, 1],
-                  extrapolate: Extrapolate.CLAMP,
+                  extrapolate: 'clamp',
                 }),
               },
             ],
