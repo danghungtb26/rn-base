@@ -1,0 +1,39 @@
+{
+  "name": "@rn-base/script",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "commander": "^9.2.0",
+    "current-dir": "^1.0.0",
+    "file-system": "^2.2.2",
+    "prompts": "^2.4.2"
+  },
+  "bin": {
+    "rns-base": "./lib/commonjs/index.js"
+  },
+  "scripts": {
+    "test": "jest",
+    "prepare": "bob build",
+    "clean": "rm -rf lib"
+  },
+  "devDependencies": {
+    "react-native-builder-bob": "^0.18.2",
+    "ts-node": "^10.8.0"
+  },
+  "react-native-builder-bob": {
+    "source": "src",
+    "output": "lib",
+    "targets": [
+      "commonjs",
+      "module",
+      [
+        "typescript",
+        {
+          "project": "tsconfig.build.json"
+        }
+      ]
+    ]
+  }
+}

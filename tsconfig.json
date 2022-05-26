@@ -28,5 +28,5 @@
     "declaration": true,
     "sourceMap": true
   },
-  "exclude": ["__tests__", "lib", "babel.config.js"],
+  "exclude": ["__tests__", "lib", "babel.config.js", "example/babel.config.js", "metro.config.js", "example/metro.config.js"],
 }
