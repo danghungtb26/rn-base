@@ -1,6 +1,6 @@
 {
   "name": "@rn-base/input-filter",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "react-native filter input",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
