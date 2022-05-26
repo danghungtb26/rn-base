@@ -12,6 +12,8 @@
     "lib",
     "android",
     "ios",
+    "!android/build",
+    "!ios/build",
     "cpp",
     "splash.podspec"
   ],
