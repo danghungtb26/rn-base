@@ -1,6 +1,6 @@
-import { Box } from '@rn-base/element'
+import { Box, elevation, Text } from '@rn-base/element'
 import React from 'react'
-import { Text, View } from 'react-native'
+import { View } from 'react-native'
 import type { TextScreenNavigationProps } from '../../navigator/routes'
 
 interface IProps extends TextScreenNavigationProps {}
@@ -8,8 +8,16 @@ interface IProps extends TextScreenNavigationProps {}
 const TextScreen: React.FC<IProps> = () => {
   return (
     <View>
-      <Text>TextScreen</Text>
-      <Box width={100} height={100} shadow={3} color="red" margin={[2, 3, 4, 5]} />
+      <Text color="red" size={12} margin={100}>
+        TextScreen
+      </Text>
+      <Box
+        width={100}
+        height={100}
+        shadow={elevation.FABPressed}
+        color="red"
+        margin={[2, 3, 4, 5]}
+      />
     </View>
   )
 }

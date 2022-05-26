@@ -1,12 +1,11 @@
 {
-  "name": "react-native-dvh-module",
+  "name": "rn-base",
   "private": true,
   "version": "0.1.0",
   "workspaces": {
     "packages": [
       "packages/*",
-      "example",
-      "Example68"
+      "example"
     ]
   },
   "description": "a",
@@ -16,7 +15,8 @@
     "test": "jest",
     "type": "tsc --noEmit --composite false",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
-    "prepare": "husky install",
+    "prepare": "husky install && yarn prepare:metro",
+    "prepare:metro": "yarn workspace example add -D metro-config",
     "release": "lerna publish"
   },
   "keywords": [
@@ -30,22 +30,23 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/danghungtb26/dvh-module.git"
+    "url": "git+https://github.com/danghungtb26/rn-base.git"
   },
-  "author": "Đặng Hùng <danghungtb26@gmail.com> (https://github.com/danghungtb26)",
+  "author": "HungDv <danghungtb26@gmail.com> (https://github.com/danghungtb26)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/danghungtb26/react-native-dvh-module/issues"
+    "url": "https://github.com/danghungtb26/rn-base/issues"
   },
-  "homepage": "https://github.com/danghungtb26/react-native-dvh-module#readme",
+  "homepage": "https://github.com/danghungtb26/rn-base#readme",
   "devDependencies": {
     "@commitlint/config-conventional": "16.2.4",
     "@react-native-community/eslint-config": "^3.0.1",
     "@react-native-community/eslint-plugin": "^1.1.0",
     "@types/lodash": "^4.14.182",
     "@types/lodash.isequal": "^4.5.6",
-    "@types/react": "^17.0.41",
-    "@types/react-native": "^0.67.3",
+    "@types/prompts": "^2.0.14",
+    "@types/react": "17.0.41",
+    "@types/react-native": "0.67.3",
     "@typescript-eslint/eslint-plugin": "^5.16.0",
     "@typescript-eslint/parser": "^5.16.0",
     "commitlint": "16.3.0",
@@ -65,8 +66,13 @@
     "jest": "^26.0.1",
     "lerna": "4.0.0",
     "lint-staged": "^12.4.1",
+    "metro-config": "^0.70.3",
     "prettier": "2.6.2",
     "typescript": "4.6.4"
+  },
+  "resolutions": {
+    "react-devtools-core": "4.14.0",
+    "@types/react": "17.0.41"
   },
   "jest": {
     "preset": "react-native",
@@ -74,8 +80,5 @@
       "<rootDir>/example/node_modules",
       "<rootDir>/lib/"
     ]
-  },
-  "lint-staged": {
-    "**/*.{js,ts,tsx}": "eslint \"**/*.{js,ts,tsx}\" --cache --fix"
   }
 }

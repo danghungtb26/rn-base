@@ -7,9 +7,6 @@ export interface TouchSingleProps extends PressableProps {
   renderTouchComponent?: (props: any) => React.ReactElement<any>
   delay?: number
 }
-
-/**
- */
 const TouchSingleBase = React.forwardRef<RefView, TouchSingleProps>(
   (
     {
@@ -24,7 +21,7 @@ const TouchSingleBase = React.forwardRef<RefView, TouchSingleProps>(
     const press = (event: GestureResponderEvent) => {
       if (Date.now() - last_time.current >= delay * 0.9) {
         last_time.current = Date.now()
-        onPress!(event)
+        onPress?.(event)
       }
     }
 

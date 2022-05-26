@@ -1,7 +1,7 @@
 import React from 'react'
-import { Text, View, Alert } from 'react-native'
+import { View, Alert } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
-import { AlertProvider } from '@rn-base/element'
+import { AlertProvider, Box, PopupProvider, Text, TouchSingle } from '@rn-base/element'
 import type { AlertScreenNavigationProps } from '../../navigator/routes'
 
 interface IProps extends AlertScreenNavigationProps {}
@@ -18,7 +18,7 @@ const AlertScreen: React.FC<IProps> = () => {
     // <AlertProvider ref={AlertProviderRef}>
     <View style={{ alignItems: 'center', justifyContent: 'center' }}>
       <TouchableOpacity onPress={onPress}>
-        <Text>AlertScreenss</Text>
+        <Text size={20}>AlertScreenss</Text>
       </TouchableOpacity>
       <TouchableOpacity
         onPress={() =>
@@ -29,7 +29,27 @@ const AlertScreen: React.FC<IProps> = () => {
           )
         }
       >
-        <Text>AlertScreenss</Text>
+        <Text size={20}>AlertScreenss</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity
+        onPress={() =>
+          PopupProvider.show({
+            children: ({ onClose }) => (
+              <Box center middle flex={1}>
+                <Box paddingVertical={50} color="white" radius={10} width="100%">
+                  <TouchSingle onPress={() => onClose(true)}>
+                    <Text size={20}>This is popup</Text>
+                  </TouchSingle>
+                </Box>
+              </Box>
+            ),
+          })
+        }
+      >
+        <Text size={20} padding={20}>
+          Show Popup
+        </Text>
       </TouchableOpacity>
     </View>
     // </AlertProvider>

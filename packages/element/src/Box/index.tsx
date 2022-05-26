@@ -16,4 +16,4 @@ export const Box = React.memo(
   equal
 )
 
-Box.displayName = 'View'
+Box.displayName = 'Box'

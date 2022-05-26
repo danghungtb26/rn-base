@@ -3,7 +3,7 @@ require 'json'
 package = JSON.parse(File.read(File.join(__dir__, 'package.json')))
 
 Pod::Spec.new do |s|
-  s.name         = 'rn-base-native'
+  s.name         = '@rn-base/native'
   s.version      = package['version']
   s.summary      = package['description']
   s.homepage     = package['homepage']
@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.authors      = package['author']
 
   s.platforms    = { ios: '10.0' }
-  s.source       = { git: 'https://github.com/danghungtb26/dvh-module-native-commons.git', tag: s.version.to_s }
+  s.source       = { git: 'https://github.com/danghungtb26/rn-base/native.git', tag: s.version.to_s }
 
   s.source_files = 'ios/**/*.{h,m,mm,swift}'
 

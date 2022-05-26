@@ -38,44 +38,28 @@ const InputFilter = React.forwardRef<InputRef, InputFilterProps>((props, forward
   // @ts-ignore
   useImperativeHandle(forwardRef, () => ({
     focus: () => {
-      if (typeof ref.current?.focus === 'function') {
-        ref.current.focus()
-      }
+      ref.current?.focus?.()
     },
     blur: () => {
-      if (typeof ref.current?.blur === 'function') {
-        ref.current.blur()
-      }
+      ref.current?.blur?.()
     },
     clear: () => {
-      if (typeof ref.current?.clear === 'function') {
-        ref.current.clear()
-      }
+      ref.current?.clear?.()
     },
     forceUpdate: () => {
-      if (typeof ref.current?.forceUpdate === 'function') {
-        ref.current.forceUpdate()
-      }
+      ref.current?.forceUpdate?.()
     },
     measure: (...arg) => {
-      if (typeof ref.current?.measure === 'function') {
-        ref.current.measure(...arg)
-      }
+      ref.current?.measure?.(...arg)
     },
     measureInWindow: (...arg) => {
-      if (typeof ref.current?.measureInWindow === 'function') {
-        ref.current.measureInWindow(...arg)
-      }
+      ref.current?.measureInWindow?.(...arg)
     },
     measureLayout: (...arg) => {
-      if (typeof ref.current?.measureLayout === 'function') {
-        ref.current.measureLayout(...arg)
-      }
+      ref.current?.measureLayout?.(...arg)
     },
     setNativeProps: (...arg) => {
-      if (typeof ref.current?.setNativeProps === 'function') {
-        ref.current.setNativeProps(...arg)
-      }
+      ref.current?.setNativeProps?.(...arg)
     },
   }))
 

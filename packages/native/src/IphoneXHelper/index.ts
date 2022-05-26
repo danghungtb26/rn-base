@@ -2,7 +2,6 @@ import { Platform, NativeModules, StatusBar } from 'react-native'
 
 const { NativeCommonManager } = NativeModules
 
-// kiểm tra xem có phải là iphoneX hay không
 export const isIphoneX: () => boolean = () => {
   return Boolean(Platform.OS === 'ios' && NativeCommonManager.is_iphone_x)
 }
@@ -35,7 +34,8 @@ const offset: Offset = {
       : (NativeCommonManager?.bottom ?? 0) - (isIphoneX() ? 10 : 0) ?? defaultBottomWithoutMargin,
 }
 
-// func lấy ra khoảng cách safe area view
 export const getOffset: () => Offset = () => {
   return offset
 }
+
+export const SafeAreaStaticInsets = offset
