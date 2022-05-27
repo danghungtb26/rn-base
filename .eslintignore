@@ -12,4 +12,5 @@ packages/*/src/__tests__/
 packages/*/*/*.js
 # packages/*/*.js
 *.js
+!packages/eslint/**
 *.d.ts
