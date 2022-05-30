@@ -15,7 +15,7 @@
     "test": "jest",
     "type": "tsc --noEmit --composite false",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
-    "prepare": "husky install && yarn prepare:metro",
+    "prepare": "husky install",
     "prepare:metro": "yarn workspace example add -D metro-config",
     "release": "lerna publish"
   },
