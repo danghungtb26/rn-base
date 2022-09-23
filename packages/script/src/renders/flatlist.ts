@@ -13,7 +13,7 @@ export const generateFlatListComponent: FunctionTypeArray = p => {
       'scrollEventThrottle={0.5}',
       'onEndReached={onLoadMore}',
       'ListFooterComponent={renderPage}',
-      'ListEmptyComponent={renderEmpty}'
+      'ListEmptyComponent={renderEmpty}',
     )
   }
 

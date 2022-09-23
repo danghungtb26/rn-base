@@ -8,7 +8,7 @@ export const Text = React.memo(
     const custom_props = useTextProps(props)
     return <RNText ref={ref} {...custom_props} />
   }),
-  equal
+  equal,
 )
 
 Text.displayName = 'Text'

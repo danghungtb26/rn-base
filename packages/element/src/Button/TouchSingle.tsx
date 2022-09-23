@@ -15,7 +15,7 @@ const TouchSingleBase = React.forwardRef<RefView, TouchSingleProps>(
       onPress = () => {},
       ...restProps
     },
-    ref
+    ref,
   ) => {
     const last_time = useRef<number>(-delay)
     const press = (event: GestureResponderEvent) => {
@@ -35,9 +35,9 @@ const TouchSingleBase = React.forwardRef<RefView, TouchSingleProps>(
         ? {
             ref,
           }
-        : {}
+        : {},
     )
-  }
+  },
 )
 
 const TouchSingle = React.memo(TouchSingleBase, equal)

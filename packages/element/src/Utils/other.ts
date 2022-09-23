@@ -4,7 +4,7 @@ import type { NumberOrString } from '../types'
 
 export const calculateValue: (
   value?: NumberOrString | NumberOrString[],
-  type?: 'margin' | 'padding'
+  type?: 'margin' | 'padding',
 ) => ViewStyle = (value, type = 'margin') => {
   if (typeof value === 'number') {
     return {
@@ -39,7 +39,6 @@ export const calculateValue: (
 }
 
 export const removeUndefined: <T extends Record<string, any>>(value: T) => T = value => {
-  // eslint-disable-next-line @typescript-eslint/no-dynamic-delete
   Object.keys(value).forEach(key => (value[key] === undefined ? delete value[key] : {}))
   return value
 }

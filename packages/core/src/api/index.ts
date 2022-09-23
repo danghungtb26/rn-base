@@ -39,12 +39,12 @@ export const createRequest = (
   timeout: number,
   languageDefault: string,
   options?: AxiosRequestConfig,
-  listener?: (method: Method, ...arg: any[]) => void
+  listener?: (method: Method, ...arg: any[]) => void,
 ) => {
   return (
     authenToken?: string | undefined,
     cancelToken?: CancelTokenSource | undefined,
-    language?: string
+    language?: string,
   ) => {
     const defaultOptions: AxiosRequestConfig = {
       baseURL: baseUrl,
@@ -85,7 +85,7 @@ export const createRequest = (
       post: <T = any, R = AxiosResponse<T>>(
         url: string,
         data?: any,
-        options: AxiosRequestConfig = {}
+        options: AxiosRequestConfig = {},
       ) => {
         if (typeof listener === 'function') {
           listener('patch', url, data, options)
@@ -106,7 +106,7 @@ export const createRequest = (
       put: <T = any, R = AxiosResponse<T>>(
         url: string,
         data?: any,
-        options: AxiosRequestConfig = {}
+        options: AxiosRequestConfig = {},
       ) => {
         if (typeof listener === 'function') {
           listener('patch', url, data, options)
@@ -128,7 +128,7 @@ export const createRequest = (
       patch: <T = any, R = AxiosResponse<T>>(
         url: string,
         data?: any,
-        options: AxiosRequestConfig = {}
+        options: AxiosRequestConfig = {},
       ) => {
         if (typeof listener === 'function') {
           listener('patch', url, data, options)

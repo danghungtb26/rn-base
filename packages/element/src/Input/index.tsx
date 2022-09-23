@@ -8,7 +8,7 @@ export const Input = React.memo(
     const p = useTextProps(props)
     return <TextInput ref={ref} {...p} />
   }),
-  equal
+  equal,
 )
 
 export const AreaInput = React.memo(
@@ -39,5 +39,5 @@ export const AreaInput = React.memo(
 
     return <Input ref={ref} multiline height={height} size={size} {...p} />
   }),
-  equal
+  equal,
 )

@@ -13,7 +13,7 @@ export const Box = React.memo(
       </View>
     )
   }),
-  equal
+  equal,
 )
 
 Box.displayName = 'Box'

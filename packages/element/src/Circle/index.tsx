@@ -12,7 +12,7 @@ export const Circle = React.memo(
       </Box>
     )
   }),
-  equal
+  equal,
 )
 
 Circle.displayName = 'Circle'

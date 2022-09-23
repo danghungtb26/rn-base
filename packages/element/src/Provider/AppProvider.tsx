@@ -28,9 +28,9 @@ export const useColors: <T extends IColorApp>() => T = () => {
 
 export const makeStyle: <
   C extends IColorApp,
-  T extends StyleSheet.NamedStyles<T> | StyleSheet.NamedStyles<any> = StyleSheet.NamedStyles<any>
+  T extends StyleSheet.NamedStyles<T> | StyleSheet.NamedStyles<any> = StyleSheet.NamedStyles<any>,
 >(
-  input: T | ((theme: { colors: C }) => T)
+  input: T | ((theme: { colors: C }) => T),
 ) => () => StyleSheet.NamedStyles<T> = input => {
   if (typeof input === 'function') {
     // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -60,7 +60,7 @@ export const AppProvider: React.FC<{
         ...colors.default,
       })
     },
-    [colors.dark, colors.default, colors.light]
+    [colors.dark, colors.default, colors.light],
   )
 
   useEffect(() => {

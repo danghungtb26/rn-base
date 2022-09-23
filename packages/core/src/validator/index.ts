@@ -16,7 +16,7 @@ export type ValidateType = {
 
 export type V = (
   value: string,
-  form?: ValidateType
+  form?: ValidateType,
 ) => {
   pass: boolean
   error?: string

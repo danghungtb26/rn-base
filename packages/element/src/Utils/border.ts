@@ -14,7 +14,7 @@ export const calculateBorder: (p: Omit<BorderProps, 'radius'>) => ViewStyle = pr
 
 export const calculateBorderForType: (
   value?: number | string | number[] | string[],
-  type?: 'Width' | 'Color'
+  type?: 'Width' | 'Color',
 ) => ViewStyle = (value, type = 'Width') => {
   if (typeof value === 'number' || typeof value === 'string') {
     return {

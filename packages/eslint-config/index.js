@@ -19,15 +19,15 @@ module.exports = {
     'react/react-in-jsx-scope': 0,
     'react/function-component-definition': 0,
     'react/jsx-props-no-spreading': 0,
-    'prettier/prettier': [
-      'error',
-      {
-        trailingComma: 'es5',
-        singleQuote: true,
-        printWidth: 100,
-        semi: false,
-      },
-    ],
+    // 'prettier/prettier': [
+    //   'error',
+    //   {
+    //     trailingComma: 'es5',
+    //     singleQuote: true,
+    //     printWidth: 100,
+    //     semi: false,
+    //   },
+    // ],
     semi: ['error', 'never'],
     'react/jsx-closing-bracket-location': 0,
     'import/extensions': [

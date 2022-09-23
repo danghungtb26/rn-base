@@ -4,7 +4,7 @@ export const generateScrollViewComponent: FunctionTypeArray = p => {
   let props = ['style={styles.full}']
   if (p.useState) {
     props = props.concat(
-      'refreshControl={<RefreshControl onRefresh={onRefresh} refreshing={refreshing} />}'
+      'refreshControl={<RefreshControl onRefresh={onRefresh} refreshing={refreshing} />}',
     )
   }
   return [

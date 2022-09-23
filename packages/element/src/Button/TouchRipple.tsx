@@ -110,7 +110,7 @@ const TouchRippleBase = React.forwardRef<RefView, TouchRippleProps>(
       color = '#fff',
       ...props
     },
-    ref
+    ref,
   ) => {
     const [offset, setOffset] = useState({
       width: 0,
@@ -193,9 +193,9 @@ const TouchRippleBase = React.forwardRef<RefView, TouchRippleProps>(
         ? {
             ref,
           }
-        : {}
+        : {},
     )
-  }
+  },
 )
 
 const TouchRipple = React.memo(TouchRippleBase, equal)
