@@ -19,15 +19,6 @@ module.exports = {
     'react/react-in-jsx-scope': 0,
     'react/function-component-definition': 0,
     'react/jsx-props-no-spreading': 0,
-    // 'prettier/prettier': [
-    //   'error',
-    //   {
-    //     trailingComma: 'es5',
-    //     singleQuote: true,
-    //     printWidth: 100,
-    //     semi: false,
-    //   },
-    // ],
     semi: ['error', 'never'],
     'react/jsx-closing-bracket-location': 0,
     'import/extensions': [
@@ -37,10 +28,6 @@ module.exports = {
         svg: 'always',
       },
     ],
-    // 'import/no-extraneous-dependencies': [
-    //   'error',
-    //   { packageDir: ['./example', './packages/element', './packages/core', './packages/script'] },
-    // ],
     'import/no-unresolved': 0,
     'react/jsx-wrap-multilines': 0,
     'object-curly-newline': 0,
