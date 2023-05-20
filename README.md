@@ -5,18 +5,12 @@ a
 ## Installation
 
 ```sh
-npm install react-native-dvh-module
+ yarn add @rn-base/core
+ yarn add @rn-base/element
+ yarn add @rn-base/splash
+ yarn add @rn-base/eslint-config
 ```
 
-## Usage
-
-```js
-import DvhModule from "react-native-dvh-module";
-
-// ...
-
-const result = await DvhModule.multiply(3, 7);
-```
 
 ## Contributing
 
