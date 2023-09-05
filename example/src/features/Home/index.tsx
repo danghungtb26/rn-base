@@ -5,7 +5,9 @@ import { FlatList, StyleSheet } from 'react-native'
 
 import { HomeScreenNavigationProps, routes } from '../../navigator/routes'
 
-interface IProps extends HomeScreenNavigationProps {}
+interface IProps extends HomeScreenNavigationProps {
+  children?: React.ReactNode
+}
 
 const features_example = [
   {

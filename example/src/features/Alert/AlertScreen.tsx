@@ -2,9 +2,8 @@ import React from 'react'
 import { View, Alert } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import { AlertProvider, Box, PopupProvider, Text, TouchSingle } from '@rn-base/element'
-import type { AlertScreenNavigationProps } from '../../navigator/routes'
 
-interface IProps extends AlertScreenNavigationProps {}
+interface IProps {}
 
 const AlertScreen: React.FC<IProps> = () => {
   const onPress = () =>
@@ -25,7 +24,7 @@ const AlertScreen: React.FC<IProps> = () => {
           Alert.alert(
             'Xin choa',
             'chao cai gif as chao cai gif as chao cai gif as chao cai gif as chao cai gif as',
-            [{ text: 'xin chao 1asds' }, { text: 'xin chao 2' }]
+            [{ text: 'xin chao 1asds' }, { text: 'xin chao 2' }],
           )
         }
       >
