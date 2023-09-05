@@ -37,7 +37,6 @@ interface Ripple {
   progress: Animated.Value
   locationX: number
   locationY: number
-  // eslint-disable-next-line react/no-unused-prop-types
   started: boolean
 }
 export const getRipple: (p: {

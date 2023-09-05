@@ -72,11 +72,11 @@ export interface BoxProps extends ViewProps, BorderProps, PaddingProps, MarginPr
 
   // children?: React.ReactNode
 
-  center?: Boolean
+  center?: boolean
 
-  row?: Boolean
+  row?: boolean
 
-  middle?: Boolean
+  middle?: boolean
 
   color?: string
 

@@ -12,6 +12,7 @@ const Stack = createNativeStackNavigator<RootNavigationParamList>()
 const MainStack = () => {
   return (
     <Stack.Navigator>
+      {/** @ts-ignore */}
       <Stack.Screen name={routes.Home} component={HomeScreen} />
       <Stack.Screen name={routes.Text} component={TextScreen} />
       <Stack.Screen name={routes.Alert} component={AlertScreen} />

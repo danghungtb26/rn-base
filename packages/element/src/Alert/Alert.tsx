@@ -1,4 +1,3 @@
-/* eslint-disable react/no-array-index-key */
 import React, { useCallback, useEffect, useRef } from 'react'
 import { TouchableOpacity, StyleSheet, View, Animated } from 'react-native'
 import { Text } from '../Text'

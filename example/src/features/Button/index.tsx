@@ -3,9 +3,8 @@ import React, { useState } from 'react'
 import { TouchableOpacityProps, View } from 'react-native'
 
 import { TouchableOpacity } from 'react-native-gesture-handler'
-import type { ButtonScreenNavigationProps } from '../../navigator/routes'
 
-interface IProps extends ButtonScreenNavigationProps {}
+interface IProps {}
 
 const ButtonScreen: React.FC<IProps> = () => {
   const [_, setTest] = useState<number>(0)

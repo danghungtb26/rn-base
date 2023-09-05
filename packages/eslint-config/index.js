@@ -1,21 +1,23 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
-  extends: ['plugin:prettier/recommended', 'prettier', 'plugin:react-hooks/recommended', 'airbnb'],
-  plugins: [
-    'jsx-a11y',
-    'import',
+  extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:react/recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:prettier/recommended',
     'prettier',
-    '@typescript-eslint',
-    'eslint-comments',
-    'react-hooks',
+    'plugin:react-hooks/recommended',
   ],
+  plugins: ['jsx-a11y', 'import', 'prettier', '@typescript-eslint', 'react-hooks'],
   rules: {
-    'react/jsx-filename-extension': [
-      1,
-      {
-        extensions: ['.js', '.jsx', '.ts', '.tsx', '.jpg', '.jpeg', '.json'],
-      },
-    ],
+    // 'react/jsx-filename-extension': [
+    //   1,
+    //   {
+    //     extensions: ['.js', '.jsx', '.ts', '.tsx', '.jpg', '.jpeg', '.json'],
+    //   },
+    // ],
     'react/react-in-jsx-scope': 0,
     'react/function-component-definition': 0,
     'react/jsx-props-no-spreading': 0,
@@ -50,7 +52,7 @@ module.exports = {
     'react/jsx-one-expression-per-line': 0,
     'react/prop-types': 0,
     indent: 0,
-    'react/no-unstable-nested-components': ['error', { allowAsProps: true }],
+    // 'react/no-unstable-nested-components': ['error', { allowAsProps: true }],
     'prefer-destructuring': 0,
     'function-paren-newline': 'off',
   },
@@ -67,4 +69,9 @@ module.exports = {
     fetch: true,
     alert: true,
   },
+  settings: {
+    react: {
+      version: "detect"
+    }
+  }
 }
